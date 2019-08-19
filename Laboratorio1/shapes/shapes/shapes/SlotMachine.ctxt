@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=SlotMachine
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SlotMachine\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=n
+comment1.target=SlotMachine(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SlotMachine\r\n
+comment2.params=
+comment2.target=void\ pull()
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=times
+comment3.target=void\ pull(int)
+comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment4.params=
+comment4.target=int\ getN()
+comment5.params=
+comment5.target=void\ makeVisible()
+comment6.params=
+comment6.target=void\ makeInvisible()
+comment7.params=
+comment7.target=void\ reset()
+comment8.params=
+comment8.target=java.lang.Boolean\ isWinningState()
+numComments=9
