@@ -19,7 +19,7 @@ public class VineYard
     {
         viñedo = new Rectangle();
         viñedo.changeSize(10,xf-xi);
-        viñedo.moveVertical(90);
+        viñedo.moveVertical(400);
         viñedo.changeColor("green");
         viñedo.makeVisible();
         

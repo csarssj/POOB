@@ -82,8 +82,8 @@ public class Valley
                 JOptionPane.showMessageDialog(null,"La lona que esta intentando eliminar no existe.");
             }
         else{
-                viñedos.get(position).makeInvisible();
-                viñedos.remove(position);
+                lonas.get(position).makeInvisible();
+                lonas.remove(position);
         }
         
     }
@@ -108,5 +108,8 @@ public class Valley
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeInvisible();
         }
+    }
+    public void MakePuncture(Trap ){
+         
     }
 }
