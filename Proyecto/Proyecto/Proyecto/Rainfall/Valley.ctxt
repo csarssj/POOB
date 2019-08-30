@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Valley
+comment0.text=\r\n\ Clase\ valle\ en\ donde\ se\ encuentra\ vi\u00F1edos\ juntos\ sus\ lonas\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Bitrafo\ \r\n\ @version\ 29/08/2019\r\n
+comment1.params=maxX\ maxY
+comment1.target=Valley(int,\ int)
+comment1.text=\r\n\ Constructor\ para\ objetos\ de\ la\ clase\ Valle\r\n\ @param\ \ int\ maxX\ para\ el\ largo\ del\ tablero\r\n\ @param\ \ int\ maxY\ para\ el\ alto\ del\ tablero\r\n
+comment2.params=name\ xi\ xf
+comment2.target=void\ openVineYard(java.lang.String,\ int,\ int)
+comment2.text=\r\n\ Crea\ un\ vi\u00F1edo\ \r\n\ @name\ nombre\ del\ vi\u00F1edo\r\n\ @xi\ posici\u00F3n\ x\ en\ donde\ empieza\ el\ vi\u00F1edo\r\n\ @xf\ posici\u00F3n\ x\ en\ donde\ termina\ el\ vi\u00F1edo\ \r\n
+comment3.params=name
+comment3.target=void\ closeVineYard(java.lang.String)
+comment3.text=\r\n\ Elimina\ un\ vi\u00F1edo\r\n\ @nombre\ el\ nombre\ del\ vi\u00F1edo\ a\ eliminar\r\n
+comment4.params=ini\ fin
+comment4.target=void\ addTrap(int[],\ int[])
+comment4.text=\r\n\ Crea\ una\ lona\r\n\ @name\ nombre\ del\ vi\u00F1edo\r\n\ @ini\ punto\ en\ donde\ empieza\ la\ lona\r\n\ @fin\ punto\ en\ donde\ termina\ la\ lona\ \r\n
+comment5.params=position
+comment5.target=void\ removeTrap(int)
+comment5.text=\r\n\ Elimina\ un\ vi\u00F1edo\r\n\ @nombre\ el\ nombre\ del\ vi\u00F1edo\ a\ eliminar\r\n
+comment6.params=
+comment6.target=void\ makeVisible()
+comment6.text=\r\n\ Hace\ visible\ el\ valle\ junto\ con\ todos\ sus\ objetos\ (vi\u00F1edos,lonas\ ,lluvia,\ etc).\ Si\ esta\ visible\ no\ hace\ nada.\r\n
+comment7.params=
+comment7.target=void\ makeInvisible()
+comment7.text=\r\n\ Hace\ invisible\ el\ valle\ junto\ con\ todos\ sus\ objetos\ (vi\u00F1edos,lonas\ ,lluvia,\ etc).\ Si\ esta\ invisible\ no\ hace\ nada.\r\n
+numComments=8
