@@ -22,6 +22,7 @@ public class Valley
     private ArrayList<Trap> lonas= new ArrayList<Trap>();
     private Hashtable<String,VineYard> viñedos=new Hashtable<String,VineYard>();
     private ArrayList<String> nombres = new ArrayList<String>();
+    private boolean ok;
     /**
      * Constructor para objetos de la clase Valle
      * @param  int maxX para el largo del tablero
@@ -33,6 +34,7 @@ public class Valley
         this.maxY = maxY;
         canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
         canvas.getCanvas(maxX,maxY);
+        ok = true;
     }
 
     /**
@@ -45,6 +47,7 @@ public class Valley
     {
         viñedos.put(name,new VineYard(name,xi, xf));
         nombres.add(name);
+        ok=true;
     }
     /**
      * Elimina un viñedo
@@ -54,11 +57,13 @@ public class Valley
     {
         if (viñedos.get(name)==null){
                 JOptionPane.showMessageDialog(null,"El viñedo que esta intentando eliminar no existe.");
+                ok=false;
             }
         else{
                 viñedos.get(name).makeInvisible();
                 viñedos.remove(name);
                 nombres.remove(name);
+                ok=true;
         }
         
     }
@@ -71,6 +76,7 @@ public class Valley
     public void addTrap(int[] ini,int[] fin)
     {
         lonas.add(new Trap(ini,fin));
+        ok=true;
     }
     /**
      * Elimina un viñedo
@@ -80,10 +86,12 @@ public class Valley
     {
         if (lonas.get(position)==null){
                 JOptionPane.showMessageDialog(null,"La lona que esta intentando eliminar no existe.");
+                ok=false;
             }
         else{
                 lonas.get(position).makeInvisible();
                 lonas.remove(position);
+                ok=true;
         }
         
     }
@@ -97,6 +105,11 @@ public class Valley
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeVisible();
         }
+        ok = true;
+    }
+    public void makePuncture(int trap, int x){
+        
+        
     }
     /**
      * Hace invisible el valle junto con todos sus objetos (viñedos,lonas ,lluvia, etc). Si esta invisible no hace nada.
@@ -108,8 +121,22 @@ public class Valley
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeInvisible();
         }
+        ok = true;
     }
-    public void MakePuncture(Trap ){
+    public void MakePuncture(int trap, int x ){
          
+    }
+    /**
+     * Revisa si la acción de un metodo se realizo correctamente o no. 
+     * @return boolean ok true si se realizo correctamente la acción false dlc. 
+     */
+    public boolean ok(){
+        return ok;
+    }
+    /**
+     * Termina el programa eliminando el valle y todo lo que contenga dentro. 
+     */
+    public void finish(){
+        System.exit(0);
     }
 }

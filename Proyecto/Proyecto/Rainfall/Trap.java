@@ -38,6 +38,8 @@ public class Trap
     public void makeVisible(){
         lona.makeVisible();
     }
-
+    /**
+     * Obtener posicion
+     */
  
 }

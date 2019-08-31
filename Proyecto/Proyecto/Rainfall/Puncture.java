@@ -15,10 +15,9 @@ public class Puncture
     /**
      * Constructor for objects of class Puncture
      */
-    public Puncture(int Trap,  )
+    public Puncture()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
