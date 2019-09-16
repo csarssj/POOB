@@ -192,5 +192,11 @@ public class Rectangle{
             canvas.erase(this);
         }
     }
+    public int getW(){
+        return width;
+    } 
+    public int getH(){
+        return height;
+    }
 }
 

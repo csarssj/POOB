@@ -86,4 +86,31 @@ public class Rain
         }
        
     }
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public void changeSize1()
+    {
+        for(Gota g: gotas){
+            g.changeSize1();
+        }
+       
+    }
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public void changeSize2()
+    {
+        for(Gota g: gotas){
+            g.changeSize2();
+        }
+       
+    }
+    
 }

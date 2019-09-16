@@ -218,4 +218,7 @@ public class Circle{
             canvas.erase(this);
         }
     }
+    public int getDiameter(){
+        return diameter;
+    }
 }

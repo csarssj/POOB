@@ -102,4 +102,16 @@ public class Trap
     public int getY2(){
         return y2;
     }
+    /**
+     * Cambia el tamaño de la lona
+     */
+    public void changeSize1(){
+        lona.changeSize2(lona.getH(),lona.getW());
+    }
+    /**
+     * Cambia el tamaño de la lona
+     */
+    public void changeSize2(){
+        lona.changeSize3(lona.getH(),lona.getW());
+    }
 }
