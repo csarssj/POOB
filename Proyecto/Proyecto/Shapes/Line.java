@@ -7,8 +7,8 @@ import javax.swing.*;
 /**
  * Write a description of class Line here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author César Eduardo González y Brayan Santiango Buitrago 
+ * @version 15/09/2019
  */
 public class Line
 {

@@ -26,8 +26,8 @@ public class Rectangle{
     public Rectangle(){
         height = 30;
         width = 40;
-        xPosition = 70;
-        yPosition = 15;
+        xPosition = 0;
+        yPosition = 0;
         color = "magenta";
         isVisible = false;
     }
@@ -94,7 +94,7 @@ public class Rectangle{
      */
     public void moveHorizontal(int distance){
         erase();
-        xPosition += distance;
+        xPosition = distance;
         draw();
     }
 
@@ -104,7 +104,7 @@ public class Rectangle{
      */
     public void moveVertical(int distance){
         erase();
-        yPosition += distance;
+        yPosition = distance;
         draw();
     }
 

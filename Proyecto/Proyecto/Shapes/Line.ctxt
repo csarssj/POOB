@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Line
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Line\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Line\ here.\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 15/09/2019\r\n
 comment1.params=
 comment1.target=Line()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Line\r\n

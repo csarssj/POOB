@@ -10,19 +10,31 @@ import javax.swing.JOptionPane;
 /**
  * Clase valle en donde se encuentra viñedos juntos sus lonas
  * 
- * @author César Eduardo González y Brayan Santiango Bitrafo 
- * @version 29/08/2019
+ * @author César Eduardo González y Brayan Santiango Buitrago 
+ * @version 15/09/2019
  */
 public class Valley
 {
     private int maxY; 
     private int maxX;
     private int x;
-    private Shapes.Canvas canvas;
     private ArrayList<Trap> lonas= new ArrayList<Trap>();
     private Hashtable<String,VineYard> viñedos=new Hashtable<String,VineYard>();
     private ArrayList<String> nombres = new ArrayList<String>();
+    private ArrayList<String> colores =new ArrayList<String>(Arrays.asList("red","gold","fire","golden","chocolate","lightgreen","gray","cyan","yellowdark","peru","blue","yellow","green","magenta","black","tomamo","orange"));
+    private ArrayList<Rain> lluvias = new ArrayList<Rain>();
     private boolean ok;
+    /**
+     * Constructor para objetos de la clase Valle
+     */
+    public Valley()
+    {
+        this.maxX = 100;
+        this.maxY = 100;
+        Shapes.Canvas canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
+        canvas.getCanvas(maxX,maxY);
+        ok = true;
+    }
     /**
      * Constructor para objetos de la clase Valle
      * @param  int maxX para el largo del tablero
@@ -32,7 +44,7 @@ public class Valley
     {
         this.maxX = maxX;
         this.maxY = maxY;
-        canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
+        Shapes.Canvas canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
         canvas.getCanvas(maxX,maxY);
         ok = true;
     }
@@ -45,9 +57,10 @@ public class Valley
      */
     public void openVineYard(String name,int xi,int xf)
     {
-        viñedos.put(name,new VineYard(name,xi, xf));
-        nombres.add(name);
-        ok=true;
+       viñedos.put(name,new VineYard(name,xi,xf,colores.get(0),maxY));
+       nombres.add(name);
+       colores.remove(colores.remove(0));
+       ok=true;
     }
     /**
      * Elimina un viñedo
@@ -107,9 +120,21 @@ public class Valley
         }
         ok = true;
     }
+    /**
+     * Hace los huecos de las lonas en un punto idicado
+     * @param trap, la lona a la cual se le va a hacer el hueco
+     * @param x, que es el punto en x donde se hace el hueco en la lona especificada
+     */
     public void makePuncture(int trap, int x){
-        
-        
+        lonas.get(trap-1).makePuncture(x);
+    }
+    /**
+     * Tapa el hueco especificado de una lona
+     * @param trap, la lona a la cual se le va a tapar el hueco
+     * @param x, es el punto en x donde se tapa el hueco de la lona especificada
+     */
+    public void patchPuncture(int trap, int x){
+        lonas.get(trap-1).patchPuncture(x);
     }
     /**
      * Hace invisible el valle junto con todos sus objetos (viñedos,lonas ,lluvia, etc). Si esta invisible no hace nada.
@@ -123,9 +148,31 @@ public class Valley
         }
         ok = true;
     }
-    public void MakePuncture(int trap, int x ){
-         
+    /**
+     * Empieza la lluvia en un punto dado
+     * @param x, el punto donde empieza la lluvia
+     */
+    public void startRain(int x){
+        Rain lluvia = new Rain(x, maxY, lonas);
+        lluvias.add(lluvia);
+        lluvia.makeVisible();
     }
+    /**
+     * Para la lluvia en un punto dado
+     * @param x, el punto donde queremos parar la lluvia
+     */
+    public void stopRain(int x){
+        int a=0;
+        for(int i = 0; i<lluvias.size();i++){
+            if(lluvias.get(i).x == x){
+                lluvias.get(i).makeInvisible();
+                a=i;
+            }
+        }
+        lluvias.remove(a);
+    }
+    
+    
     /**
      * Revisa si la acción de un metodo se realizo correctamente o no. 
      * @return boolean ok true si se realizo correctamente la acción false dlc. 
