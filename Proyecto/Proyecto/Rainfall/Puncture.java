@@ -1,34 +1,59 @@
-    package Rainfall;
+package Rainfall;
 
-
+import Shapes.*;
 /**
- * Write a description of class MakePuncture here.
+ * Clase Puncture (huecos), donde se crean los huecos en las lonas, para que los 
+ * viñedos puedan ser regados.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author César Eduardo González y Brayan Santiango Buitrago 
+ * @version 15/09/2019
  */
 public class Puncture
 {
-    // instance variables - replace the example below with your own
+    private Rectangle hueco;
     private int x;
-
+    private int y;
     /**
-     * Constructor for objects of class Puncture
+     * Constructor de la clase Puncture
+     * @param x posición en x donde se hace el hueco
+     * @param y posicion en y donde se hace el hueco
      */
-    public Puncture()
+    public Puncture(int x,int y)
     {
-        
+        hueco = new Rectangle();
+        this.x=x;
+        this.y=y;
+        hueco.changeSize(10,10);
+        hueco.moveVertical(y);
+        hueco.moveHorizontal(x);
+        hueco.changeColor("white");
+        hueco.makeVisible();
     }
-
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Hace invisible el hueco dado.
+     * 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void makeInvisible(){
+        hueco.makeInvisible();
     }
+    
+    /**
+     * Hace visible el hueco dado.
+     */
+    public void makeVisible(){
+        hueco.makeVisible();
+    }
+    /**
+     * @Return x, la posicion en x del hueco.
+     */
+    public int getXPuncture(){
+        return x;
+    }
+    /**
+     *@Return y, la posicion en y del hueco. 
+     */
+    public int getYPuncture(){
+        return y;
+    }
+    
 }

@@ -1,10 +1,19 @@
 #BlueJ class context
 comment0.target=Puncture
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MakePuncture\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Puncture()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Puncture\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment0.text=\r\n\ Clase\ Puncture\ (huecos),\ donde\ se\ crean\ los\ huecos\ en\ las\ lonas,\ para\ que\ los\ \r\n\ vi\u00F1edos\ puedan\ ser\ regados.\r\n\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 15/09/2019\r\n
+comment1.params=x\ y
+comment1.target=Puncture(int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Puncture\r\n\ @param\ x\ posici\u00F3n\ en\ x\ donde\ se\ hace\ el\ hueco\r\n\ @param\ y\ posicion\ en\ y\ donde\ se\ hace\ el\ hueco\r\n
+comment2.params=
+comment2.target=void\ makeInvisible()
+comment2.text=\r\n\ Hace\ invisible\ el\ hueco\ dado.\r\n\ \r\n
+comment3.params=
+comment3.target=void\ makeVisible()
+comment3.text=\r\n\ Hace\ visible\ el\ hueco\ dado.\r\n
+comment4.params=
+comment4.target=int\ getXPuncture()
+comment4.text=\r\n\ @Return\ x,\ la\ posicion\ en\ x\ del\ hueco.\r\n
+comment5.params=
+comment5.target=int\ getYPuncture()
+comment5.text=\r\n@Return\ y,\ la\ posicion\ en\ y\ del\ hueco.\ \r\n
+numComments=6

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=VineYard
-comment0.text=\r\n\ Clase\ de\ Vi\u00F1edos\ los\ cuales\ deben\ ser\ regados\ y\ recibir\ luz\ solar\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Bitrafo\ \r\n\ @version\ 29/08/2019\r\n
-comment1.params=name\ xi\ xf
-comment1.target=VineYard(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Clase\ de\ Vi\u00F1edos\ los\ cuales\ deben\ ser\ regados\ y\ recibir\ luz\ solar\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 15/09/2019\r\n
+comment1.params=name\ xi\ xf\ color\ maxY
+comment1.target=VineYard(java.lang.String,\ int,\ int,\ java.lang.String,\ int)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ VineYard(vi\u00F1edos)\r\n
 comment2.params=
 comment2.target=void\ makeInvisible()
@@ -10,4 +10,7 @@ comment2.text=\r\n\ Hace\ invisible\ el\ vi\u00F1edo\ dado.\r\n\ \r\n
 comment3.params=
 comment3.target=void\ makeVisible()
 comment3.text=\r\n\ Hace\ visible\ el\ vi\u00F1edo\ dado.\r\n
-numComments=4
+comment4.params=color
+comment4.target=void\ changeColor(java.lang.String)
+comment4.text=\r\n\ Cambia\ el\ color\ del\ vi\u00F1edo\r\n\ @param\ color,\ el\ color\ a\ cambiar\r\n
+numComments=5

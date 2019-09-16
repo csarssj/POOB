@@ -137,19 +137,19 @@ public class Canvas{
         Color tomato = new Color(255, 99, 71);
         if(colorString.equals("red"))
             graphic.setColor(Color.red);
-        else if(colorString.equals("goldrod"))
+        else if(colorString.equals("gold"))
             graphic.setColor(goldrod);
-        else if(colorString.equals("firebrick"))
+        else if(colorString.equals("fire"))
             graphic.setColor(firebrick);
-        else if(colorString.equals("darkGolden"))
+        else if(colorString.equals("golden"))
             graphic.setColor(darkGolden);
         else if(colorString.equals("chocolate"))
             graphic.setColor(chocolate);
         else if(colorString.equals("lightgreen"))
             graphic.setColor(lightgreen);
-        else if(colorString.equals("grayneutro"))
+        else if(colorString.equals("gray"))
             graphic.setColor(grayneutro);
-        else if(colorString.equals("darkcyan"))
+        else if(colorString.equals("cyan"))
             graphic.setColor(darkcyan);
         else if(colorString.equals("yellowdark"))
             graphic.setColor(yellowdark);
