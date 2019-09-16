@@ -55,5 +55,16 @@ public class Puncture
     public int getYPuncture(){
         return y;
     }
-    
+    /**
+     * Cambia el tamaño de la lona
+     */
+    public void changeSize1(){
+        hueco.changeSize(hueco.getH()*2,hueco.getW()*2);
+    }
+    /**
+     * Cambia el tamaño de la lona
+     */
+    public void changeSize2(){
+        hueco.changeSize(hueco.getH()/2,hueco.getW()/2);
+    }
 }

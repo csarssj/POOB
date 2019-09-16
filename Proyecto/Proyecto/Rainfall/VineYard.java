@@ -52,6 +52,18 @@ public class VineYard
     public void changeColor(String color){
         viñedo.changeColor(color);
     }
+    /**
+     * Cambia el tamaño del viñedo
+     */
+    public void changeSize1(){
+        viñedo.changeSize(viñedo.getH()*2,viñedo.getW()*2);
+    }
+    /**
+     * Cambia el tamaño del viñedo
+     */
+    public void changeSize2(){
+        viñedo.changeSize(viñedo.getH()/2,viñedo.getW()/2);
+    }
    
 
 }

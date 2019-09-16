@@ -19,10 +19,10 @@ public class Line
     private int y1;
     private int x2;
     private int y2;
-    private int x12;
-    private int y12;
-    private int x22;
-    private int y22;
+    private int x11;
+    private int y11;
+    private int x21;
+    private int y21;
     private String color;
     private boolean isVisible;
 
@@ -34,9 +34,13 @@ public class Line
         height = 30;
         width = 40;
         x1 = 70;
+        x11= 75;
         x2 = 100;
+        x21= 105;
         y1 = 15;
+        y11= 25;
         y2 = 30;
+        y21= 40;
         color = "Magenta";
         isVisible = false;
     }
@@ -48,9 +52,13 @@ public class Line
         height = 30;
         width = 40;
         this.x1 = x1;
+        this.x11 = x1+5;
         this.x2 = x2;
+        this.x21 = x2+5;
         this.y1 = y1;
+        this.y11 = y1+10;
         this.y2 = y2;
+        this.y21 = y2+10;
         color = "Magenta";
         isVisible = false;
     }
@@ -180,6 +188,44 @@ public class Line
         width = newWidth;
         draw();
     }
+    /**
+     * Change the size to the new size
+     * @param newHeight the new height in pixels. newHeight must be >=0.
+     * @param newWidht the new width in pixels. newWidth must be >=0.
+     */
+    public void changeSize2(int newHeight, int newWidth) {
+        erase();
+        height = newHeight;
+        width = newWidth;
+        this.x1 = x1-5;
+        this.y1 = y1-5;
+        this.x2 = x2+5;
+        this.y2 = y2-5;
+        this.x11 = x11-5;
+        this.x21 = x21+5;
+        this.y11 = y11+5;
+        this.y21 = y21+5;
+        draw();
+    }
+    /**
+     * Change the size to the new size
+     * @param newHeight the new height in pixels. newHeight must be >=0.
+     * @param newWidht the new width in pixels. newWidth must be >=0.
+     */
+    public void changeSize3(int newHeight, int newWidth) {
+        erase();
+        height = newHeight;
+        width = newWidth;
+        this.x1 = x1+5;
+        this.y1 = y1+5;
+        this.x2 = x2-5;
+        this.y2 = y2+5;
+        this.x11 = x11+5;
+        this.x21 = x21-5;
+        this.y11 = y11-5;
+        this.y21 = y21-5;
+        draw();
+    }
     
     /**
      * Change the color. 
@@ -198,8 +244,8 @@ public class Line
     private void draw() {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
-            int[] xpoints = {x1,x2,x2+5,x1+5};
-            int[] ypoints = {y1,y2,y2+10,y1 +10};
+            int[] xpoints = {x1,x2,x21,x11};
+            int[] ypoints = {y1,y2,y21,y11};
             canvas.draw(this, color, new Polygon(xpoints, ypoints, 4));
             canvas.wait(10);
         }
@@ -213,5 +259,11 @@ public class Line
             Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
+    }
+    public int getW(){
+        return width;
+    } 
+    public int getH(){
+        return height;
     }
 }

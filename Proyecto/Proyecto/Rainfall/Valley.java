@@ -117,6 +117,13 @@ public class Valley
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeVisible();
+            for(int j=0; i<lonas.get(i).huecos.size();j++){
+                lonas.get(i).huecos.get(j).makeVisible();
+            }
+        }
+        
+        for(int i=0;i<lluvias.size();i++){
+            lluvias.get(i).makeVisible();
         }
         ok = true;
     }
@@ -145,6 +152,13 @@ public class Valley
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeInvisible();
+            for(int j=0; i<lonas.get(i).huecos.size();j++){
+                lonas.get(i).huecos.get(j).makeInvisible();
+            }
+        }
+        
+        for(int i=0;i<lluvias.size();i++){
+            lluvias.get(i).makeInvisible();
         }
         ok = true;
     }
@@ -156,6 +170,7 @@ public class Valley
         Rain lluvia = new Rain(x, maxY, lonas);
         lluvias.add(lluvia);
         lluvia.makeVisible();
+        ok = true;
     }
     /**
      * Para la lluvia en un punto dado
@@ -170,8 +185,49 @@ public class Valley
             }
         }
         lluvias.remove(a);
+        ok=true;
     }
-    
+    /**
+     * Hacer zoom para aumentar o disminuir el tamaño del valle
+     * @param c, char que puede ser "+" para aumentar o "-" para disminuir
+     */
+    public void zoom(char c){
+        if(c =='+'){
+            for(int i=0; i<viñedos.size();i++){
+                viñedos.get(nombres.get(i)).changeSize1();
+            }
+            for(int i=0; i< lonas.size();i++){
+                lonas.get(i).changeSize1();
+                if(lonas.get(i).huecos.size()!=0){
+                    for(int j=0; i<lonas.get(i).huecos.size();j++){
+                        lonas.get(i).huecos.get(j).changeSize1();
+                    }
+                }
+            }
+            
+            for(int i=0;i<lluvias.size();i++){
+                lluvias.get(i).changeSize1();
+            }
+        }
+        else{
+            for(int i=0; i<viñedos.size();i++){
+                viñedos.get(nombres.get(i)).changeSize2();
+            }
+            for(int i=0; i< lonas.size();i++){
+                lonas.get(i).changeSize2();
+                if(lonas.get(i).huecos.size()!=0){
+                    for(int j=0; i<lonas.get(i).huecos.size();j++){
+                        lonas.get(i).huecos.get(j).changeSize2();
+                    }
+                }
+            }
+            
+            for(int i=0;i<lluvias.size();i++){
+                lluvias.get(i).changeSize2();
+            }
+        }
+        ok=true;
+    }
     
     /**
      * Revisa si la acción de un metodo se realizo correctamente o no. 

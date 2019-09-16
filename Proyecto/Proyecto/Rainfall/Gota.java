@@ -39,6 +39,26 @@ public class Gota
         gota.moveHorizontal(x);
         gota.moveVertical(y);
     }
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public void changeSize1()
+    {
+        gota.changeSize(gota.getDiameter()*2);
+    }
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public void changeSize2()
+    {
+            gota.changeSize(gota.getDiameter()/2);
+    }
     
 }
 
