@@ -24,17 +24,17 @@ public class Rain
         int ini=0;
         
         while(ini<y-10){
-            
             for (int i=0;i<lonas.size();i++){
-                if((ini == (int)(lonas.get(i).getP()*x+lonas.get(i).getY())) && (lonas.get(i).getX1()<x && lonas.get(i).getX2()>x)){
+                int[][] pos = lonas.get(i).getPos();
+                if((ini == (int)(lonas.get(i).getP()*x+lonas.get(i).getY())) && (pos[0][0]<x && pos[1][0]>x)){
                     boolean f = true; 
                     if(lonas.get(i).getP()<0){
-                        for(int j = x; i>=lonas.get(i).getX1();j--){
+                        for(int j = x; i>=pos[0][0];j--){
                                     Gota gota = new Gota(j,(int)(lonas.get(i).getP()*j+lonas.get(i).getY()));
                                     gotas.add(gota);
                         }
                         if(f){
-                            x=lonas.get(i).getX1()+1;
+                            x=pos[0][0]+1;
                             ini=(int)(lonas.get(i).getP()*x+lonas.get(i).getY())+1;
                             
                         }else{
@@ -43,12 +43,12 @@ public class Rain
                         }
                     }
                     else if(lonas.get(i).getP()>0){
-                        for(int k=x; k<=lonas.get(i).getX2();k++){
+                        for(int k=x; k<=pos[1][0];k++){
                                 Gota gota = new Gota(k,(int)(lonas.get(i).getP()*k+lonas.get(i).getY()));
                                 gotas.add(gota);
                             }
                         if(f){
-                            x=lonas.get(i).getX2()-1;
+                            x=pos[1][0]-1;
                             ini=(int)(lonas.get(i).getP()*x+lonas.get(i).getY())+1;
 
                             

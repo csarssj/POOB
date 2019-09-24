@@ -27,7 +27,6 @@ public class Puncture
         hueco.moveVertical(y);
         hueco.moveHorizontal(x);
         hueco.changeColor("white");
-        hueco.makeVisible();
     }
     /**
      * Hace invisible el hueco dado.

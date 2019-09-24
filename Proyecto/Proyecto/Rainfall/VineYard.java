@@ -11,8 +11,10 @@ public class VineYard
 {
     // instance variables - replace the example below with your own
     private Rectangle viñedo;
-    private int x;
+    private int xi;
+    private int xf;
     private int y;
+    private int[] pos;
     private String color;
     
     /**
@@ -21,15 +23,14 @@ public class VineYard
     public VineYard(String name,int xi,int xf,String color,int maxY)
     {
         viñedo = new Rectangle();
-        x = xi;
-        xf = xf;
+        this.xi = xi;
+        this.xf = xf;
         this.color =color;
-        y = maxY;
+        this.y = maxY;
         viñedo.changeColor(color);
         viñedo.changeSize(10,xf-xi);
         viñedo.moveHorizontal(xi);
         viñedo.moveVertical(maxY-20);
-        viñedo.makeVisible();
     }
     /**
      * Hace invisible el viñedo dado.
@@ -64,6 +65,22 @@ public class VineYard
     public void changeSize2(){
         viñedo.changeSize(viñedo.getH()/2,viñedo.getW()/2);
     }
-   
+    /**
+     * Retorna las posiciones del viñedo
+     * @returns, pos lista con las posiciones
+     */
+    public int[] getPos(){
+        xi=this.xi;
+        xf=this.xf;
+        int [] pos = {xi,xf};
+        return pos;
+    }
+    /**
+     * Retorna las posiciones del viñedo
+     * @returns, el color del viñedo
+     */
+    public String getColor(){
+        return color;
+    }
 
 }

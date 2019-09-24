@@ -19,11 +19,12 @@ public class Valley
     private int maxX;
     private int x;
     private ArrayList<Trap> lonas= new ArrayList<Trap>();
-    private Hashtable<String,VineYard> viñedos=new Hashtable<String,VineYard>();
+    private Hashtable<String,VineYard> vinedos=new Hashtable<String,VineYard>();
     private ArrayList<String> nombres = new ArrayList<String>();
     private ArrayList<String> colores =new ArrayList<String>(Arrays.asList("red","gold","fire","golden","chocolate","lightgreen","gray","cyan","yellowdark","peru","blue","yellow","green","magenta","black","tomamo","orange"));
     private ArrayList<Rain> lluvias = new ArrayList<Rain>();
     private boolean ok;
+    private boolean isVisible;
     /**
      * Constructor para objetos de la clase Valle
      */
@@ -34,6 +35,7 @@ public class Valley
         Shapes.Canvas canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
         canvas.getCanvas(maxX,maxY);
         ok = true;
+        isVisible = false;
     }
     /**
      * Constructor para objetos de la clase Valle
@@ -47,6 +49,7 @@ public class Valley
         Shapes.Canvas canvas = new Shapes.Canvas("New", this.maxX,this.maxY,Color.white);
         canvas.getCanvas(maxX,maxY);
         ok = true;
+        isVisible = false;
     }
 
     /**
@@ -57,10 +60,27 @@ public class Valley
      */
     public void openVineYard(String name,int xi,int xf)
     {
-       viñedos.put(name,new VineYard(name,xi,xf,colores.get(0),maxY));
-       nombres.add(name);
-       colores.remove(colores.remove(0));
-       ok=true;
+        boolean condicion = true; 
+        for(String  n: nombres){
+            int pos []=vinedos.get(n).getPos();
+            if((xi >= pos[0] && xf <= pos[1])||(pos[0] >= xi && pos[1] <= xf)
+            ||((pos[0] >= xi || pos[1] >= xi) && pos[1] <= xf)||(pos[0] >= xi && (pos[0] <= xf && pos[1] >= xf))){
+                JOptionPane.showMessageDialog(null,"El viñedo no se puede crear.");
+                condicion = false;
+                ok=false;
+                break;
+            }
+        }
+        if(condicion){
+            vinedos.put(name,new VineYard(name,xi,xf,colores.get(0),maxY));
+            nombres.add(name);
+            colores.remove(colores.remove(0));
+            actualizar();
+            if(isVisible){
+                vinedos.get(name).makeVisible();
+            }
+            ok=true;
+        }
     }
     /**
      * Elimina un viñedo
@@ -68,14 +88,15 @@ public class Valley
      */
     public void closeVineYard(String name)
     {
-        if (viñedos.get(name)==null){
+        if (vinedos.get(name)==null){
                 JOptionPane.showMessageDialog(null,"El viñedo que esta intentando eliminar no existe.");
                 ok=false;
             }
         else{
-                viñedos.get(name).makeInvisible();
-                viñedos.remove(name);
+                vinedos.get(name).makeInvisible();
+                vinedos.remove(name);
                 nombres.remove(name);
+                actualizar();
                 ok=true;
         }
         
@@ -89,6 +110,10 @@ public class Valley
     public void addTrap(int[] ini,int[] fin)
     {
         lonas.add(new Trap(ini,fin));
+        if(isVisible){
+            lonas.get(lonas.size()-1).makeVisible();
+        }
+        actualizar();
         ok=true;
     }
     /**
@@ -104,6 +129,7 @@ public class Valley
         else{
                 lonas.get(position).makeInvisible();
                 lonas.remove(position);
+                actualizar();
                 ok=true;
         }
         
@@ -112,8 +138,9 @@ public class Valley
      * Hace visible el valle junto con todos sus objetos (viñedos,lonas ,lluvia, etc). Si esta visible no hace nada.
      */
     public void makeVisible(){
-        for(int i=0; i<viñedos.size();i++){
-            viñedos.get(nombres.get(i)).makeVisible();
+        isVisible=true;
+        for(int i=0; i<vinedos.size();i++){
+            vinedos.get(nombres.get(i)).makeVisible();
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeVisible();
@@ -134,6 +161,11 @@ public class Valley
      */
     public void makePuncture(int trap, int x){
         lonas.get(trap-1).makePuncture(x);
+        ArrayList<Puncture> huecos = lonas.get(trap-1).getHuecos();
+        if(isVisible){
+            huecos.get(huecos.size()-1).makeVisible();
+        }
+        ok=true;
     }
     /**
      * Tapa el hueco especificado de una lona
@@ -142,13 +174,15 @@ public class Valley
      */
     public void patchPuncture(int trap, int x){
         lonas.get(trap-1).patchPuncture(x);
+        ok=true;
     }
     /**
      * Hace invisible el valle junto con todos sus objetos (viñedos,lonas ,lluvia, etc). Si esta invisible no hace nada.
      */
     public void makeInvisible(){
-        for(int i=0; i<viñedos.size();i++){
-            viñedos.get(nombres.get(i)).makeInvisible();
+        isVisible=false;
+        for(int i=0; i<vinedos.size();i++){
+            vinedos.get(nombres.get(i)).makeInvisible();
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeInvisible();
@@ -169,7 +203,9 @@ public class Valley
     public void startRain(int x){
         Rain lluvia = new Rain(x, maxY, lonas);
         lluvias.add(lluvia);
-        lluvia.makeVisible();
+        if(isVisible){
+            lluvia.makeVisible();
+        }
         ok = true;
     }
     /**
@@ -180,7 +216,9 @@ public class Valley
         int a=0;
         for(int i = 0; i<lluvias.size();i++){
             if(lluvias.get(i).x == x){
-                lluvias.get(i).makeInvisible();
+                if(!isVisible){
+                    lluvias.get(i).makeInvisible();
+                }
                 a=i;
             }
         }
@@ -193,8 +231,8 @@ public class Valley
      */
     public void zoom(char c){
         if(c =='+'){
-            for(int i=0; i<viñedos.size();i++){
-                viñedos.get(nombres.get(i)).changeSize1();
+            for(int i=0; i<vinedos.size();i++){
+                vinedos.get(nombres.get(i)).changeSize1();
             }
             for(int i=0; i< lonas.size();i++){
                 lonas.get(i).changeSize1();
@@ -210,8 +248,8 @@ public class Valley
             }
         }
         else{
-            for(int i=0; i<viñedos.size();i++){
-                viñedos.get(nombres.get(i)).changeSize2();
+            for(int i=0; i<vinedos.size();i++){
+                vinedos.get(nombres.get(i)).changeSize2();
             }
             for(int i=0; i< lonas.size();i++){
                 lonas.get(i).changeSize2();
@@ -242,4 +280,32 @@ public class Valley
     public void finish(){
         System.exit(0);
     }
+    private void actualizar(){
+        String newColor = "black";
+        for(Trap t: lonas){
+            int [][] posLon = t.getPos();
+            int cont = 0;
+            for(String v: nombres){
+                int [] posVin = vinedos.get(v).getPos();
+                if(posLon[0][0]<posVin[0] && posLon[0][0]<posVin[1] && posLon[1][0]>posVin[0] && posLon[1][0]>posVin[1]){
+                    newColor=vinedos.get(v).getColor();
+                    cont++;
+                }
+            
+            }
+            if(cont==1){
+                if (isVisible){
+                    t.changeColor(newColor);
+                    t.makeVisible();
+                }
+            }else if(cont == 0 || cont>1){
+                if (isVisible && (t.getColor()!="black")){
+                    
+                    t.changeColor("black");
+                    t.makeVisible();
+                }
+            }
+            }
+    }
+
 }

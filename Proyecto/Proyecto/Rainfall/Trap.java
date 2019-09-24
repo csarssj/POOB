@@ -32,13 +32,10 @@ public class Trap
     public Trap(int[] ini,int[] fin)
     {
         lona = new Line(ini[0],fin[0],ini[1],fin[1]);
-        x1= ini[0];
-        x2= fin[0];
-        y1=ini[1];
-        y2=fin[1];
-        double p = ((double)y2-(double)y1)/((double)x2-(double)x1);
-        double y = -p*x2+y2;
-        lona.makeVisible();
+        this.x1= ini[0];
+        this.x2= fin[0];
+        this.y1=ini[1];
+        this.y2=fin[1];
         int inter = 0;
         color="black";
     }
@@ -82,25 +79,17 @@ public class Trap
         }
     }
     public double getP(){
-        double p = ((double)y2-(double)y1)/((double)x2-(double)x1);
+        double p = ((double)this.y2-(double)this.y1)/((double)this.x2-(double)this.x1);
         return p;
     }
     public double getY(){
-        double p = ((double)y2-(double)y1)/((double)x2-(double)x1);
-        double y = -p*x2+y2;
+        double p = ((double)this.y2-(double)this.y1)/((double)this.x2-(double)this.x1);
+        double y = -p*this.x2+this.y2;
         return y;
     }
-    public int getX1(){
-        return x1;
-    }
-    public int getX2(){
-        return x2;
-    }
-    public int getY1(){
-        return y1;
-    }
-    public int getY2(){
-        return y2;
+    public int[][] getPos(){
+        int [][] pos = {{this.x1,this.y1},{this.x2,this.y2}};
+        return pos;
     }
     /**
      * Cambia el tamaño de la lona
@@ -113,5 +102,27 @@ public class Trap
      */
     public void changeSize2(){
         lona.changeSize3(lona.getH(),lona.getW());
+    }
+    /**
+     * Cambia el color de la lona
+     * @param color, nuevo color
+     */
+    public void changeColor(String newColor){
+        color = newColor;
+        lona.changeColor(newColor);
+    }
+    /**
+     * Retorna el color de la lona
+     * @Returns color
+     */
+    public String getColor(){
+        return color;
+    }
+    /**
+     * Retorna  las lista de huecos de una lona
+     * @Returns huecos
+     */
+    public ArrayList<Puncture> getHuecos(){
+        return huecos;
     }
 }
