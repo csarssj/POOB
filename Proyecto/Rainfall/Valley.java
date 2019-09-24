@@ -284,21 +284,21 @@ public class Valley
         String newColor = "black";
         for(Trap t: lonas){
             int [][] posLon = t.getPos();
-            int cont = 0;
+            boolean condicion = false;;
             for(String v: nombres){
                 int [] posVin = vinedos.get(v).getPos();
                 if(posLon[0][0]<posVin[0] && posLon[0][0]<posVin[1] && posLon[1][0]>posVin[0] && posLon[1][0]>posVin[1]){
                     newColor=vinedos.get(v).getColor();
-                    cont++;
+                    condicion = true;
                 }
             
             }
-            if(cont==1){
+            if(condicion){
                 if (isVisible){
                     t.changeColor(newColor);
                     t.makeVisible();
                 }
-            }else if(cont == 0 || cont>1){
+            }else if(!condicion){
                 if (isVisible && (t.getColor()!="black")){
                     
                     t.changeColor("black");
