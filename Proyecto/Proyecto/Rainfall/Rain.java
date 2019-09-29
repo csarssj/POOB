@@ -17,21 +17,39 @@ public class Rain
     public int xf;
     /**
      * Constructor for objects of class Lluvia
+     * @param x posicion en x de la lluvia 
+     * @param y tamaño maximo del viñedo en y
+     * @param lonas lonas del valle
      */
     public Rain(int x,int y,ArrayList<Trap> lonas)
     {   
         this.x=x;
         int ini=0;
         
-        while(ini<y-10){
+        while(ini<y-20){
             for (int i=0;i<lonas.size();i++){
                 int[][] pos = lonas.get(i).getPos();
                 if((ini == (int)(lonas.get(i).getP()*x+lonas.get(i).getY())) && (pos[0][0]<x && pos[1][0]>x)){
                     boolean f = true; 
                     if(lonas.get(i).getP()<0){
-                        for(int j = x; i>=pos[0][0];j--){
+                        for(int j = x; j>=pos[0][0];j--){
+                               if(!f){
+                                   break;
+                                }else{
+                                    if(lonas.get(i).huecos.size()!=0){
+                                        for(int z=0; z<lonas.get(i).huecos.size();z++){
+                                            Gota gota = new Gota(j,(int)(lonas.get(i).getP()*j+lonas.get(i).getY()));
+                                            gotas.add(gota);
+                                            if(lonas.get(i).huecos.get(z).getXPuncture()==j){
+                                                x=j;
+                                                f=false;
+                                                break;
+                                            }   
+                                        }
+                                    }
                                     Gota gota = new Gota(j,(int)(lonas.get(i).getP()*j+lonas.get(i).getY()));
                                     gotas.add(gota);
+                                }
                         }
                         if(f){
                             x=pos[0][0]+1;
@@ -43,8 +61,23 @@ public class Rain
                     }
                     else if(lonas.get(i).getP()>0){
                         for(int k=x; k<=pos[1][0];k++){
-                                Gota gota = new Gota(k,(int)(lonas.get(i).getP()*k+lonas.get(i).getY()));
-                                gotas.add(gota);
+                            if(!f){
+                                break;
+                            }else{
+                                    if(lonas.get(i).huecos.size()!=0){
+                                        for(int z=0; z<lonas.get(i).huecos.size();z++){
+                                            Gota gota = new Gota(k,(int)(lonas.get(i).getP()*k+lonas.get(i).getY()));
+                                            gotas.add(gota);
+                                            if(lonas.get(i).huecos.get(z).getXPuncture()==k){
+                                                x=k;
+                                                f=false;
+                                                break;
+                                            }   
+                                        }
+                                    }
+                                    Gota gota = new Gota(k,(int)(lonas.get(i).getP()*k+lonas.get(i).getY()));
+                                    gotas.add(gota);
+                                }
                             }
                         if(f){
                             x=pos[1][0]-1;
@@ -83,10 +116,7 @@ public class Rain
        
     }
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Aumenta el tamaño de la lluvia
      */
     public void changeSize1()
     {
@@ -96,10 +126,7 @@ public class Rain
        
     }
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Reduce el tamaño de la lluvia  
      */
     public void changeSize2()
     {
@@ -113,5 +140,11 @@ public class Rain
      */
     public int getX(){
         return x;
+    }
+    /**
+     * Retorna gotas, que es la lista de gotas que conforman la lluvia
+     */
+    public ArrayList<Gota> getGotas(){
+        return gotas;
     }
 }

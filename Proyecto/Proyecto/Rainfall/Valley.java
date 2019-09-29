@@ -10,7 +10,7 @@
     /**
      * Clase valle en donde se encuentra viñedos juntos sus lonas
      * 
-     @author César Eduardo González y Brayan Santiango Buitrago 
+     * @author César Eduardo González y Brayan Santiango Buitrago 
      * @version 1/10/2019
      */
     public class Valley
@@ -56,9 +56,9 @@
 
     /**
      * Crea un viñedo 
-     * @name nombre del viñedo
-     * @xi posición x en donde empieza el viñedo
-     * @xf posición x en donde termina el viñedo 
+     * @param name nombre del viñedo
+     * @param xi posición x en donde empieza el viñedo
+     * @param xf posición x en donde termina el viñedo 
      */
     public void openVineYard(String name,int xi,int xf)
     {
@@ -93,7 +93,7 @@
     }
     /**
      * Elimina un viñedo
-     * @nombre el nombre del viñedo a eliminar
+     * @param nombre el nombre del viñedo a eliminar
      */
     public void closeVineYard(String name)
     {
@@ -119,9 +119,9 @@
     }
     /**
      * Crea una lona
-     * @name nombre del viñedo
-     * @ini punto en donde empieza la lona
-     * @fin punto en donde termina la lona 
+     * @param name nombre del viñedo
+     * @param ini punto en donde empieza la lona
+     * @param fin punto en donde termina la lona 
      */
     public void addTrap(int[] ini,int[] fin)
     {
@@ -138,7 +138,7 @@
     }
     /**
      * Elimina un viñedo
-     * @nombre el nombre del viñedo a eliminar
+     * @param nombre el nombre del viñedo a eliminar
      */
     public void removeTrap(int position)
     {
@@ -181,8 +181,8 @@
     }
     /**
      * Hace los huecos de las lonas en un punto idicado
-     * @param trap, la lona a la cual se le va a hacer el hueco
-     * @param x, que es el punto en x donde se hace el hueco en la lona especificada
+     * @param trap la lona a la cual se le va a hacer el hueco
+     * @param x que es el punto en x donde se hace el hueco en la lona especificada
      */
     public void makePuncture(int trap, int x){
         lonas.get(trap-1).makePuncture(x);
@@ -198,8 +198,8 @@
     }
     /**
      * Tapa el hueco especificado de una lona
-     * @param trap, la lona a la cual se le va a tapar el hueco
-     * @param x, es el punto en x donde se tapa el hueco de la lona especificada
+     * @param trap la lona a la cual se le va a tapar el hueco
+     * @param x es el punto en x donde se tapa el hueco de la lona especificada
      */
     public void patchPuncture(int trap, int x){
         ultimaAccion = "patchPuncture";
@@ -232,7 +232,7 @@
     }
     /**
      * Empieza la lluvia en un punto dado
-     * @param x, el punto donde empieza la lluvia
+     * @param x el punto donde empieza la lluvia
      */
     public void startRain(int x){
         Rain lluvia = new Rain(x, maxY, lonas);
@@ -247,7 +247,7 @@
     }
     /**
      * Para la lluvia en un punto dado
-     * @param x, el punto donde queremos parar la lluvia
+     * @param x el punto donde queremos parar la lluvia
      */
     public void stopRain(int x){
         int a=0;
@@ -265,7 +265,7 @@
     }
     /**
      * Hacer zoom para aumentar o disminuir el tamaño del valle
-     * @param c, char que puede ser "+" para aumentar o "-" para disminuir
+     * @param c char que puede ser "+" para aumentar o "-" para disminuir
      */
     public void zoom(char c){
         if(c =='+'){
@@ -324,6 +324,9 @@
     public void finish(){
         System.exit(0);
     }
+    /**
+     * Se encarga de actualizar el color de las lonas deacuerdo al viñedo que cubren
+     */
     private void actualizar(){
         String newColor = "black";
         for(Trap t: lonas){
@@ -353,7 +356,7 @@
     }
     /**
      * Rehace o Deshace la ultima accion realizada
-     * @param
+     * @param d si es "U" deshace la última acción y si es "R" rehace la última acción,
      */
     public void _do(char d){
         if(d=='U' || d== 'R'){
@@ -393,5 +396,27 @@
         }else{
             JOptionPane.showMessageDialog(null,"Ingreso el caracter incorrecto.");
         }
+    }
+    /**
+     * Consulta los viñedos que pueden ser mojados por la lluvia
+     * @returns mojados ArrayList de los viñedos mojados
+     */
+    public void rainsfall(){
+        ArrayList<String> mojados = new ArrayList<String>();
+        for(Rain r: lluvias){
+            for(Gota g: r.getGotas()){
+                if (g.getPos()[1]>=(maxY-30)){
+                    for(String v: nombres){
+                        if(vinedos.get(v).getPos()[0]<=g.getPos()[0] && vinedos.get(v).getPos()[1]>=g.getPos()[0]){
+                            mojados.add(v);
+                        }
+                    }
+                }
+            }
+        }
+        for(String s: mojados){
+            System.out.println(s);
+        }
+        
     }
 }   

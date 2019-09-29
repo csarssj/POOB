@@ -8,7 +8,7 @@ import Shapes.*;
  * pero que los viñedos no se vean afectados
  * 
  * @author César Eduardo González y Brayan Santiango Buitrago 
- * @version 15/09/2019
+ * @version 1/10/2019
  */
 public class Trap
 {
@@ -25,9 +25,8 @@ public class Trap
     public ArrayList <Puncture> huecos = new ArrayList<Puncture>();
     /**
      * Constructor para la clase Trap
-     * 
-     * @int[] ini punto inicial de la lona
-     * @int[] fin punto final de la lona
+     * @param ini punto inicial de la lona
+     * @param fin punto final de la lona
     **/
     public Trap(int[] ini,int[] fin)
     {
@@ -78,15 +77,27 @@ public class Trap
             }
         }
     }
+    /**
+     * Retorna la pendiente de la lona
+     * @returns p pendiente de la lona
+     */
     public double getP(){
         double p = ((double)this.y2-(double)this.y1)/((double)this.x2-(double)this.x1);
         return p;
     }
+    /**
+     * Retorna el punto de corte en y de la lona
+     * @returns y punto de corte en y
+     */
     public double getY(){
         double p = ((double)this.y2-(double)this.y1)/((double)this.x2-(double)this.x1);
         double y = -p*this.x2+this.y2;
         return y;
     }
+    /**
+     * Retorna los puntos de los extremos de una lona
+     * @returns int[][] lista de posiciones de la lona
+     */
     public int[][] getPos(){
         int [][] pos = {{this.x1,this.y1},{this.x2,this.y2}};
         return pos;
@@ -120,9 +131,20 @@ public class Trap
     }
     /**
      * Retorna  las lista de huecos de una lona
-     * @Returns huecos
+     * @Returns huecos arraylist de huecos
      */
     public ArrayList<Puncture> getHuecos(){
         return huecos;
+    }
+    /**
+     * comprueba si algo esta cayendo en un hueco
+     */
+    public boolean fall(int j){
+        for(int z=0; z<huecos.size();z++){
+            if(huecos.get(z).getXPuncture()==j){
+                return false;
+            }   
+        }
+        return true;
     }
 }

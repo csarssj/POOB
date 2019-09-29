@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*; 
 
 /**
- * Write a description of class Line here.
+ * Clase line para poder dibujar las lonas
  * 
  * @author César Eduardo González y Brayan Santiango Buitrago 
  * @version 15/09/2019
@@ -27,7 +27,7 @@ public class Line
     private boolean isVisible;
 
     /**
-     * Constructor for objects of class Line
+     * Constructor de la clase line
      */
     public Line()
     {
@@ -45,7 +45,11 @@ public class Line
         isVisible = false;
     }
     /**
-     * Constructor for objects of class Line
+     * Constructor de la clase line
+     * @param x1 posicion en x del primer punto
+     * @param y1 posicion en y del primer punto
+     * @param x2 posicion en x del segundo punto
+     * @param y2 posicion en y del segundo punto
      */
     public Line(int x1, int x2, int y1, int y2)
     {
@@ -63,7 +67,7 @@ public class Line
         isVisible = false;
     }
     /**
-     * Make this rectangle visible. If it was already visible, do nothing.
+     * Make this line visible. If it was already visible, do nothing.
      */
     public void makeVisible(){
         isVisible = true;
@@ -260,9 +264,17 @@ public class Line
             canvas.erase(this);
         }
     }
+    /**
+     * Se obtiene el ancho de la linea
+     * @returns int width ancho de la linea
+     */
     public int getW(){
         return width;
-    } 
+    }
+    /**
+     * Se obtiene el alto de la linea
+     * @returns int height alto de la linea
+     */
     public int getH(){
         return height;
     }

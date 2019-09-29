@@ -2,10 +2,10 @@ package Rainfall;
 
 import Shapes.*;
 /**
- * Write a description of class Gota here.
+ * Clase que simula las gotas de la lluvia de un viñedo
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author César Eduardo González y Brayan Santiango Buitrago 
+ * @version 1/10/2019
  */
 public class Gota
 {
@@ -16,7 +16,9 @@ public class Gota
     public String color;
     
     /**
-     * Constructor for objects of class Gota
+     * Constructor de una gota, que forma parte de la lluvia
+     * @param x posicion de la gota en x
+     * @param y posicion de la gota en y
      */
     public Gota(int x,int y)
     {
@@ -28,36 +30,48 @@ public class Gota
         gota.changeSize(10);
         gota.changeColor("cyan");
     }
-
+    /**
+     * Hace visible la gota 
+     */
     public void makeVisible(){
         gota.makeVisible();
     }
+    /**
+     * Hace invisible la gota 
+     */
     public void makeInvisible(){
         gota.makeInvisible();
     }
+    /**
+     * Cambia de posición la gota
+     * @param x posicion de la gota en x
+     * @param y posicion de la gota en y
+     */
     public void move(int x, int y){
         gota.moveHorizontal(x);
         gota.moveVertical(y);
     }
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Aumenta el tamaño de la gota 
      */
     public void changeSize1()
     {
         gota.changeSize(gota.getDiameter()*2);
     }
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Reduce el tamaño de la gota
      */
     public void changeSize2()
     {
             gota.changeSize(gota.getDiameter()/2);
+    }
+    /**
+     * Retorna la posiciones en "x" y en "y" de la gota
+     * @returns int[] posiciones de la gota
+     */
+    public int[] getPos(){
+        int[] pos = {this.x,this.y}; 
+        return pos;
     }
     
 }
