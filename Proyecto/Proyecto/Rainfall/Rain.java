@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 /**
- * Write a description of class Lluvia here.
+ *Clase Lluvia que simula la misma en el problema Directing Rainfall
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author César Eduardo González y Brayan Santiango Buitrago 
+ * @version 1/10/2019
  */
 public class Rain
 {
@@ -24,31 +24,30 @@ public class Rain
         int ini=0;
         
         while(ini<y-10){
-            
             for (int i=0;i<lonas.size();i++){
-                if((ini == (int)(lonas.get(i).getP()*x+lonas.get(i).getY())) && (lonas.get(i).getX1()<x && lonas.get(i).getX2()>x)){
+                int[][] pos = lonas.get(i).getPos();
+                if((ini == (int)(lonas.get(i).getP()*x+lonas.get(i).getY())) && (pos[0][0]<x && pos[1][0]>x)){
                     boolean f = true; 
                     if(lonas.get(i).getP()<0){
-                        for(int j = x; i>=lonas.get(i).getX1();j--){
+                        for(int j = x; i>=pos[0][0];j--){
                                     Gota gota = new Gota(j,(int)(lonas.get(i).getP()*j+lonas.get(i).getY()));
                                     gotas.add(gota);
                         }
                         if(f){
-                            x=lonas.get(i).getX1()+1;
+                            x=pos[0][0]+1;
                             ini=(int)(lonas.get(i).getP()*x+lonas.get(i).getY())+1;
                             
                         }else{
-                            
                             ini++;
                         }
                     }
                     else if(lonas.get(i).getP()>0){
-                        for(int k=x; k<=lonas.get(i).getX2();k++){
+                        for(int k=x; k<=pos[1][0];k++){
                                 Gota gota = new Gota(k,(int)(lonas.get(i).getP()*k+lonas.get(i).getY()));
                                 gotas.add(gota);
                             }
                         if(f){
-                            x=lonas.get(i).getX2()-1;
+                            x=pos[1][0]-1;
                             ini=(int)(lonas.get(i).getP()*x+lonas.get(i).getY())+1;
 
                             
@@ -57,27 +56,24 @@ public class Rain
                         }
                     }
                 }
-
-                
             }
             Gota gota = new Gota(x,ini);
-            //gota.makeVisible();
             gotas.add(gota);
             ini++;
             
         }
-        xf=x;
+        this.xf=x;
     }
+    /**
+     * Vuelve visible las gotas que conforman la lluvia
+     */
     public void makeVisible(){
         for(Gota g: gotas){
             g.makeVisible();
         }
     }
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Vuelve invisible las gotas que conforman la lluvia
      */
     public void makeInvisible()
     {
@@ -112,5 +108,10 @@ public class Rain
         }
        
     }
-    
+    /**
+     * Retorna x, que es la posicion de la lluvia
+     */
+    public int getX(){
+        return x;
+    }
 }
