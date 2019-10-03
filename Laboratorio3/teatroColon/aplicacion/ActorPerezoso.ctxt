@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ActorPerezoso
+comment0.text=\r\n\ Clase\ actor\ perezoso\ que\ es\ extendiende\ a\ actor\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=teatro\ name\ posicionx\ posiciony
+comment1.target=ActorPerezoso(Teatro,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ del\ Actor\ perezoso\r\n\ @param\ teatro\ en\ donde\ se\ trabaja\r\n\ @param\ nombre\ del\ actor\r\n\ @param\ \ posicionx\ del\ actor\ perezoso\r\n\ @param\ \ posicionxy\ del\ actor\ perezoso\r\n
+comment2.params=
+comment2.target=void\ corte()
+comment3.params=
+comment3.target=void\ actue()
+comment4.params=
+comment4.target=void\ decida()
+numComments=5
