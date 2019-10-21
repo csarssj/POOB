@@ -1,15 +1,20 @@
 #BlueJ class context
 comment0.target=ValleyTestC4
-comment0.text=\r\n\ The\ test\ class\ ValleyTestC4.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ de\ pruebas\ ciclo\ 4\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 20/10/2019\r\n
 comment1.params=
-comment1.target=void\ DeberiaLalluviaAcidaDebeCaerEnElMismoPuntoDondeInicio()
-comment1.text=@Test\r\n\ \ \ \ public\ void\ DeberiaAgujerearLonaFlexible(){\r\n\ \ \ \ \ \ \ \ v1\ \=\ new\ Valley(500,\ 500);\r\n\ \ \ \ \ \ \ \ v1.addTarp(new\ int[]{100,100},new\ int[]{200,200});\r\n\ \ \ \ \ \ \ \ v1.addTarp("flexible",new\ int[]{100,200},new\ int[]{200,100});\r\n\ \ \ \ \ \ \ \ v1.makePuncture(1,20);\r\n\ \ \ \ \ \ \ \ v1.makePuncture(1,80);\r\n\ \ \ \ \ \ \ \ v1.makePuncture(2,50);\r\n\ \ \ \ \ \ \ \ assertEquals(v1.tarps()[0],new\ int[][]{{100,200},{200,210},{80}});\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n
+comment1.target=void\ DeberiaBorrarLonaRadicalSiHaceHueco()
 comment2.params=
-comment2.target=void\ DeberiaDesaparecerTarpRadicalSiSeAgujerea()
+comment2.target=void\ NoDeberiaHacerInvisibleLonaHard()
 comment3.params=
-comment3.target=void\ NoDeberiaEliminarTarpHard()
+comment3.target=void\ DeberiaLalluviaAcidaDebeCaerEnElMismoPuntoDondeInicio()
 comment4.params=
-comment4.target=void\ DeberiaHacerSoloUnHuecoLonaFlexible()
+comment4.target=void\ DeberiaDesaparecerTarpRadicalSiSeAgujerea()
 comment5.params=
-comment5.target=void\ NoDeberiaAgujerearLonaHard()
-numComments=6
+comment5.target=void\ NoDeberiaEliminarTarpHard()
+comment6.params=
+comment6.target=void\ DeberiaHacerHuecoEnLugarDiferenteEnLonzaCrazy()
+comment7.params=
+comment7.target=void\ DeberiaHacerSoloUnHuecoLonaFlexible()
+comment8.params=
+comment8.target=void\ NoDeberiaAgujerearLonaHard()
+numComments=9

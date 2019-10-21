@@ -194,4 +194,10 @@ public class Rain
     public void setActual(int x){
         actual = x;
     }
+    /**
+     * retorna el tipo de la lluvia
+     */
+    public String getTipo(){
+        return "normal";
+    }
 }

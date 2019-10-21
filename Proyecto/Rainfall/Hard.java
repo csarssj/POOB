@@ -12,6 +12,7 @@ public class Hard extends Tarp
 
 {   
     private Circle distintivo;
+    private boolean isVisible;
     /**
      * Constructor para la clase Hard
      * @param ini punto inicial de la lona
@@ -21,13 +22,14 @@ public class Hard extends Tarp
     {
         super(ini,fin );
         tipo="hard";
+        isVisible=true;
         distintivo = new Circle();
         distintivo.moveHorizontal(ini[0]);
         distintivo.moveVertical(ini[1]);
         distintivo.changeSize(10);
         distintivo.changeColor("gold");
     }
-    
+    @Override
     public void makePuncture(int x){
         
     }
@@ -40,5 +42,9 @@ public class Hard extends Tarp
     public void makeVisible(){
         super.makeVisible();
         distintivo.makeVisible();
+    }
+    @Override
+    public boolean getVisible(){
+        return true;
     }
 }

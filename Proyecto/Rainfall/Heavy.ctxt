@@ -19,4 +19,6 @@ comment5.text=\r\n\ indica\ si\ hay\ contacto\ con\ una\ lona\ radical\r\n
 comment6.params=x
 comment6.target=void\ setActual(int)
 comment6.text=\r\n\ cambia\ posicion\ de\ la\ lona\ actual\ donde\ se\ esta\ cayendo\r\n
-numComments=7
+comment7.params=
+comment7.target=java.lang.String\ getTipo()
+numComments=8

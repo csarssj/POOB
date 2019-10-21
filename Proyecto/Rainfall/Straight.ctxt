@@ -7,4 +7,6 @@ comment1.text=\r\n\ Constructor\ de\ la\ clase\ Lluvia\ Straight\r\n\ @param\ x\
 comment2.params=x\ y\ lonas
 comment2.target=void\ start(int,\ int,\ java.util.ArrayList)
 comment2.text=\r\n\ \ Simula\ la\ lluvia\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n\ @param\ y\ tama\u00F1o\ maximo\ del\ vi\u00F1edo\ en\ y\r\n\ @param\ lonas\ lonas\ del\ valle\r\n
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ getTipo()
+numComments=4

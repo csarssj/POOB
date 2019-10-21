@@ -102,4 +102,8 @@ public class Heavy extends Rain
     public void setActual(int x){
         actual = x;
     }
+    @Override
+    public String getTipo(){
+        return "heavy";
+    }
 }

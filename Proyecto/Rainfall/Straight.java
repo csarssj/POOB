@@ -99,4 +99,8 @@ public class Straight extends Rain
         }
         this.xf=x;
     }
+    @Override
+    public String getTipo(){
+        return "straight";
+    }
 }

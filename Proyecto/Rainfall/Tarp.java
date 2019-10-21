@@ -21,6 +21,7 @@ public class Tarp
     private double inter;
     private double p;
     private double y;
+    private boolean isVisible;
     protected String color,tipo;
     private Circle distintivo;
     public ArrayList <Puncture> huecos = new ArrayList<Puncture>();
@@ -39,6 +40,7 @@ public class Tarp
         int inter = 0;
         color="black";
         tipo = "normal";
+        isVisible=false;
         distintivo = new Circle();
         distintivo.moveHorizontal(ini[0]);
         distintivo.moveVertical(ini[1]);
@@ -52,6 +54,7 @@ public class Tarp
     public void makeInvisible(){
         lona.makeInvisible();
         distintivo.makeInvisible();
+        isVisible=false;
     }
     /**
      * Hace invisible sus huecos
@@ -82,6 +85,7 @@ public class Tarp
     public void makeVisible(){
         lona.makeVisible();
         distintivo.makeVisible();
+        isVisible=true;
     }
     /**
      * Hace un hueco en la lona
@@ -187,5 +191,12 @@ public class Tarp
      */
     public String getTipo(){
         return tipo;
+    }
+    /**
+     * Retorna si esta invisible la lona
+     * @returns isVisible
+     */
+    public boolean getVisible(){
+        return isVisible;
     }
 }

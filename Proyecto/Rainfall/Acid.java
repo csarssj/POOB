@@ -30,4 +30,8 @@ public class Acid extends Rain
         }
         this.xf=x;
     }
+    @Override
+    public String getTipo(){
+        return "acid";
+    }
 }
