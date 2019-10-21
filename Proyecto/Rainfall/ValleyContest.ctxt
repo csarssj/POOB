@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ValleyContest
+comment1.params=
+comment1.target=ValleyContest()
+comment1.text=\r\n\ Constructor\ clase\ ValleyContest\r\n
+comment2.params=vineyard\ tarp
+comment2.target=int\ solve(int[],\ int[][])
+comment2.text=\r\n\ Main\ de\ la\ solucion\r\n\ @param\ vineyard[]\ posiciones\ en\ x\ del\ vi\u00F1edo\ y\ la\ cantidad\ de\ lonas\r\n\ @param\ tarp[][]\ contiene\ las\ lonas\ con\ sus\ dos\ puntos\r\n\ \r\n\ @return\ res\ cantidad\ minima\ de\ huecos\ para\ abrir\ en\ las\ lonas\r\n
+comment3.params=s\ pendientes\ vine\ n
+comment3.target=java.lang.String[][]\ Crear(int[][],\ java.lang.String[],\ int[],\ int)
+comment3.text=\r\n\ Construccion\ de\ la\ matriz\ para\ simular\ el\ caso\r\n\ @param\ s[][]\ matriz\ de\ las\ lonas\ con\ sus\ posiciones\ \r\n\ @param\ pendientes\ []\ contiene\ las\ pendientes\ de\ la\ matriz\r\n\ @param\ vine[]\ posiciones\ x\ del\ vi\u00F1edo\r\n\ @param\ n\ limite\ x\ de\ la\ matriz\ \r\n\ \r\n\ @return\ simulate[][]\ matriz\ con\ la\ simulaci\u00F3n\ del\ caso\ \r\n
+comment4.params=x\ y
+comment4.target=int\ minimo(int,\ int)
+comment4.text=\r\n\ Recursion\ para\ el\ camino\ minimo\r\n\ @param\ x\ posicion\ en\ la\ matriz\ que\ simula\ el\ programa\r\n\ @param\ y\ posicion\ en\ la\ matriz\ que\ simula\ el\ programa\r\n\ \r\n\ @return\ hueco\ cantidad\ minima\ de\ huecos\ para\ abrir\ en\ las\ lonas\r\n
+numComments=5

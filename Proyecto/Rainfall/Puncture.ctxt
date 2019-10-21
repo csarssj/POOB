@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Puncture
-comment0.text=\r\n\ Clase\ Puncture\ (huecos),\ donde\ se\ crean\ los\ huecos\ en\ las\ lonas,\ para\ que\ los\ \r\n\ vi\u00F1edos\ puedan\ ser\ regados.\r\n\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 15/09/2019\r\n
+comment0.text=\r\n\ Clase\ Puncture\ (huecos),\ donde\ se\ crean\ los\ huecos\ en\ las\ lonas,\ para\ que\ los\ \r\n\ vi\u00F1edos\ puedan\ ser\ regados.\r\n\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 1/10/2019\r\n
 comment1.params=x\ y
 comment1.target=Puncture(int,\ int)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Puncture\r\n\ @param\ x\ posici\u00F3n\ en\ x\ donde\ se\ hace\ el\ hueco\r\n\ @param\ y\ posicion\ en\ y\ donde\ se\ hace\ el\ hueco\r\n

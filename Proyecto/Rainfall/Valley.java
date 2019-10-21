@@ -1,30 +1,32 @@
-package Rainfall;
+    package Rainfall;
 
-import Shapes.*;
-import java.util.*;
-import java.awt.Color;
-import java.awt.*;
-import java.awt.Graphics;
-import javax.swing.JOptionPane;
+    import Shapes.*;
+    import java.util.*;
+    import java.awt.Color;
+    import java.awt.*;
+    import java.awt.Graphics;
+    import javax.swing.JOptionPane;
 
-/**
- * Clase valle en donde se encuentra viñedos juntos sus lonas
- * 
- * @author César Eduardo González y Brayan Santiango Buitrago 
- * @version 15/09/2019
- */
-public class Valley
-{
+    /**
+     * Clase valle en donde se encuentra viñedos juntos sus lonas
+     * 
+     * @author César Eduardo González y Brayan Santiango Buitrago 
+     * @version 1/10/2019
+     */
+    public class Valley
+    {
     private int maxY; 
     private int maxX;
     private int x;
-    private ArrayList<Trap> lonas= new ArrayList<Trap>();
-    private Hashtable<String,VineYard> vinedos=new Hashtable<String,VineYard>();
-    private ArrayList<String> nombres = new ArrayList<String>();
-    private ArrayList<String> colores =new ArrayList<String>(Arrays.asList("red","gold","fire","golden","chocolate","lightgreen","gray","cyan","yellowdark","peru","blue","yellow","green","magenta","black","tomamo","orange"));
-    private ArrayList<Rain> lluvias = new ArrayList<Rain>();
+    public ArrayList<Tarp> lonas= new ArrayList<Tarp>();
+    public Hashtable<String,VineYard> vinedos=new Hashtable<String,VineYard>();
+    public ArrayList<String> nombres = new ArrayList<String>();
+    public ArrayList<String> colores =new ArrayList<String>(Arrays.asList("red","gold","fire","golden","chocolate","lightgreen","gray","cyan","yellowdark","peru","blue","yellow","green","magenta","black","tomamo","orange"));
+    public ArrayList<Rain> lluvias = new ArrayList<Rain>();
     private boolean ok;
     private boolean isVisible;
+    private String ultimaAccion = "";
+    private ArrayList ultObj = new ArrayList();
     /**
      * Constructor para objetos de la clase Valle
      */
@@ -54,9 +56,9 @@ public class Valley
 
     /**
      * Crea un viñedo 
-     * @name nombre del viñedo
-     * @xi posición x en donde empieza el viñedo
-     * @xf posición x en donde termina el viñedo 
+     * @param name nombre del viñedo
+     * @param xi posición x en donde empieza el viñedo
+     * @param xf posición x en donde termina el viñedo 
      */
     public void openVineYard(String name,int xi,int xf)
     {
@@ -74,6 +76,13 @@ public class Valley
         if(condicion){
             vinedos.put(name,new VineYard(name,xi,xf,colores.get(0),maxY));
             nombres.add(name);
+            ultimaAccion = "openVineyard";
+            ultObj = new ArrayList();
+            ultObj.add(name);
+            ultObj.add(xi);
+            ultObj.add(xf);
+            ultObj.add(colores.get(0));
+            ultObj.add(maxY);
             colores.remove(colores.remove(0));
             actualizar();
             if(isVisible){
@@ -84,7 +93,7 @@ public class Valley
     }
     /**
      * Elimina un viñedo
-     * @nombre el nombre del viñedo a eliminar
+     * @param nombre el nombre del viñedo a eliminar
      */
     public void closeVineYard(String name)
     {
@@ -93,6 +102,13 @@ public class Valley
                 ok=false;
             }
         else{
+                ultimaAccion = "closeVineyard";
+                ultObj = new ArrayList();
+                ultObj.add(name);
+                ultObj.add(vinedos.get(name).getPos()[0]);
+                ultObj.add(vinedos.get(name).getPos()[1]);
+                ultObj.add(vinedos.get(name).getColor());
+                ultObj.add(this.maxY);
                 vinedos.get(name).makeInvisible();
                 vinedos.remove(name);
                 nombres.remove(name);
@@ -103,13 +119,47 @@ public class Valley
     }
     /**
      * Crea una lona
-     * @name nombre del viñedo
-     * @ini punto en donde empieza la lona
-     * @fin punto en donde termina la lona 
+     * @param name nombre del viñedo
+     * @param ini punto en donde empieza la lona
+     * @param fin punto en donde termina la lona 
      */
-    public void addTrap(int[] ini,int[] fin)
+    public void addTarp(int[] ini,int[] fin)
     {
-        lonas.add(new Trap(ini,fin));
+        lonas.add(new Tarp(ini,fin));
+        ultimaAccion = "addTarp";
+        ultObj = new ArrayList();
+        ultObj.add(ini);
+        ultObj.add(fin);
+        if(isVisible){
+            lonas.get(lonas.size()-1).makeVisible();
+        }
+        actualizar();
+        ok=true;
+    }
+    /**
+     * Crea una lona
+     * @param name nombre del viñedo
+     * @param ini punto en donde empieza la lona
+     * @param fin punto en donde termina la lona 
+     */
+    public void addTarp(String type,int[] ini,int[] fin)
+    {
+        type=type.toLowerCase();
+        if (type.equals("hard")){
+            lonas.add(new Hard(ini,fin));
+        }else if (type.equals("flexible")){
+            lonas.add(new Flexible(ini,fin));
+        }else if (type.equals("crazy")){
+            lonas.add(new Crazy(ini,fin));
+        }else if (type.equals("radical")){
+            lonas.add(new Radical(ini,fin));
+        }else{
+            lonas.add(new Tarp(ini,fin));
+        }
+        ultimaAccion = "addTarp";
+        ultObj = new ArrayList();
+        ultObj.add(ini);
+        ultObj.add(fin);
         if(isVisible){
             lonas.get(lonas.size()-1).makeVisible();
         }
@@ -118,17 +168,21 @@ public class Valley
     }
     /**
      * Elimina un viñedo
-     * @nombre el nombre del viñedo a eliminar
+     * @param nombre el nombre del viñedo a eliminar
      */
-    public void removeTrap(int position)
+    public void removeTarp(int position)
     {
-        if (lonas.get(position)==null){
+        if (lonas.get(position-1)==null){
                 JOptionPane.showMessageDialog(null,"La lona que esta intentando eliminar no existe.");
                 ok=false;
             }
         else{
-                lonas.get(position).makeInvisible();
-                lonas.remove(position);
+                ultimaAccion = "removeTarp";
+                ultObj = new ArrayList();
+                ultObj.add(lonas.get(position-1).getPos()[0]);
+                ultObj.add(lonas.get(position-1).getPos()[1]);    
+                lonas.get(position-1).makeInvisible();
+                lonas.remove(position-1);
                 actualizar();
                 ok=true;
         }
@@ -144,36 +198,50 @@ public class Valley
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeVisible();
-            for(int j=0; i<lonas.get(i).huecos.size();j++){
-                lonas.get(i).huecos.get(j).makeVisible();
-            }
+            lonas.get(i).makeVisibleHuecos();
         }
         
         for(int i=0;i<lluvias.size();i++){
             lluvias.get(i).makeVisible();
         }
+        ultimaAccion="makeVisible";
         ok = true;
     }
     /**
      * Hace los huecos de las lonas en un punto idicado
-     * @param trap, la lona a la cual se le va a hacer el hueco
-     * @param x, que es el punto en x donde se hace el hueco en la lona especificada
+     * @param Tarp la lona a la cual se le va a hacer el hueco
+     * @param x que es el punto en x donde se hace el hueco en la lona especificada
      */
-    public void makePuncture(int trap, int x){
-        lonas.get(trap-1).makePuncture(x);
-        ArrayList<Puncture> huecos = lonas.get(trap-1).getHuecos();
+    public void makePuncture(int Tarp, int x){
+        if(lonas.get(Tarp-1).getTipo()=="radical"){
+            removeTarp(Tarp);
+        }else if(lonas.get(Tarp-1).getTipo()=="hard"){
+            
+        }else{
+            
+            lonas.get(Tarp-1).makePuncture(x);
+            ultimaAccion = "makePuncture";
+            ultObj = new ArrayList();
+            ultObj.add(Tarp);
+            ultObj.add(x);
+            ArrayList<Puncture> huecos = lonas.get(Tarp-1).getHuecos();
         if(isVisible){
             huecos.get(huecos.size()-1).makeVisible();
+        }
         }
         ok=true;
     }
     /**
      * Tapa el hueco especificado de una lona
-     * @param trap, la lona a la cual se le va a tapar el hueco
-     * @param x, es el punto en x donde se tapa el hueco de la lona especificada
+     * @param Tarp la lona a la cual se le va a tapar el hueco
+     * @param x es el punto en x donde se tapa el hueco de la lona especificada
      */
-    public void patchPuncture(int trap, int x){
-        lonas.get(trap-1).patchPuncture(x);
+    public void patchPuncture(int Tarp, int x){
+        ultimaAccion = "patchPuncture";
+        ultObj = new ArrayList();
+        ultObj.add(Tarp);
+        ultObj.add(x);
+        lonas.get(Tarp-1).patchPuncture(x);
         ok=true;
     }
     /**
@@ -186,48 +254,78 @@ public class Valley
         }
         for(int i=0; i< lonas.size();i++){
             lonas.get(i).makeInvisible();
-            for(int j=0; i<lonas.get(i).huecos.size();j++){
-                lonas.get(i).huecos.get(j).makeInvisible();
-            }
+            lonas.get(i).makeInvisibleHuecos();
         }
         
         for(int i=0;i<lluvias.size();i++){
             lluvias.get(i).makeInvisible();
         }
+        ultimaAccion="makeInvisible";
         ok = true;
     }
     /**
      * Empieza la lluvia en un punto dado
-     * @param x, el punto donde empieza la lluvia
+     * @param x el punto donde empieza la lluvia
      */
     public void startRain(int x){
-        Rain lluvia = new Rain(x, maxY, lonas);
+        Rain lluvia = new Rain(x);
+        lluvia.start(x,maxY, lonas);
         lluvias.add(lluvia);
+        ultimaAccion = "startRain";
+        ultObj = new ArrayList();
+        ultObj.add(x);
         if(isVisible){
             lluvia.makeVisible();
         }
         ok = true;
     }
     /**
+     * Empieza a caer la lluvia
+     * @param type el tipo de lluvia,x represeta la posicion en donde empieza la lluvia
+     */
+    public void startRain(String type,int x){
+        type=type.toLowerCase();
+        Rain lluvia;
+        if (type.equals("acid")){
+            lluvia = new Acid(x);
+        }else if (type.equals("straight")){
+            lluvia = new Straight(x);
+        } else if (type.equals("heavy")){
+            lluvia = new Heavy(x);
+        }else{
+            lluvia = new Rain(x);
+        }
+        ultimaAccion = "startRain";
+        ultObj = new ArrayList();
+        ultObj.add(x);
+        lluvia.start(x,maxY,lonas);
+        lluvias.add(lluvia);
+        if (isVisible){
+            lluvia.makeVisible();
+        }
+        ok = true;
+    }
+    /**
      * Para la lluvia en un punto dado
-     * @param x, el punto donde queremos parar la lluvia
+     * @param x el punto donde queremos parar la lluvia
      */
     public void stopRain(int x){
         int a=0;
         for(int i = 0; i<lluvias.size();i++){
-            if(lluvias.get(i).x == x){
-                if(!isVisible){
-                    lluvias.get(i).makeInvisible();
-                }
+            if(lluvias.get(i).getX() == x){
+                lluvias.get(i).makeInvisible();
                 a=i;
             }
         }
+        ultimaAccion = "stopRain";
+        ultObj = new ArrayList();
+        ultObj.add(x);
         lluvias.remove(a);
         ok=true;
     }
     /**
      * Hacer zoom para aumentar o disminuir el tamaño del valle
-     * @param c, char que puede ser "+" para aumentar o "-" para disminuir
+     * @param c char que puede ser "+" para aumentar o "-" para disminuir
      */
     public void zoom(char c){
         if(c =='+'){
@@ -246,6 +344,9 @@ public class Valley
             for(int i=0;i<lluvias.size();i++){
                 lluvias.get(i).changeSize1();
             }
+            ultimaAccion = "zoom";
+            ultObj = new ArrayList();
+            ultObj.add(c);
         }
         else{
             for(int i=0; i<vinedos.size();i++){
@@ -263,6 +364,9 @@ public class Valley
             for(int i=0;i<lluvias.size();i++){
                 lluvias.get(i).changeSize2();
             }
+            ultimaAccion = "zoom";
+            ultObj = new ArrayList();
+            ultObj.add(c);
         }
         ok=true;
     }
@@ -280,10 +384,13 @@ public class Valley
     public void finish(){
         System.exit(0);
     }
+    /**
+     * Se encarga de actualizar el color de las lonas deacuerdo al viñedo que cubren
+     */
     private void actualizar(){
         String newColor = "black";
-        for(Trap t: lonas){
-            int [][] posLon = t.getPos();
+        for(Tarp t: lonas){
+            int [][] posLon = t.getPos();   
             boolean condicion = false;;
             for(String v: nombres){
                 int [] posVin = vinedos.get(v).getPos();
@@ -307,5 +414,115 @@ public class Valley
             }
             }
     }
-
-}
+    /**
+     * Rehace o Deshace la ultima accion realizada
+     * @param d si es "U" deshace la última acción y si es "R" rehace la última acción,
+     */
+    public void _do(char d){
+        if(d=='U' || d== 'R'){
+            if (ultimaAccion.equals("openVineyard")){
+                closeVineYard((String)ultObj.get(0));
+            }else if(ultimaAccion.equals("closeVineyard")){
+                openVineYard((String)ultObj.get(0),(int)ultObj.get(1),(int)ultObj.get(2));
+            }else if(ultimaAccion.equals("addTarp")){
+                removeTarp(lonas.size()-1);
+            }else if(ultimaAccion.equals("removeTarp")){
+                addTarp((int[])ultObj.get(0),(int[])ultObj.get(1));
+            }else if(ultimaAccion.equals("startRain")){
+                stopRain((int)ultObj.get(0));
+            }
+            else if(ultimaAccion.equals("stopRain")){
+                startRain((int)ultObj.get(0));
+            }
+            else if(ultimaAccion.equals("makePuncture")){
+                patchPuncture((int)ultObj.get(0),(int)ultObj.get(1));
+            }
+            else if(ultimaAccion.equals("patchPuncture")){
+                makePuncture((int)ultObj.get(0),(int)ultObj.get(1));
+            }
+            else if(ultimaAccion.equals("zoom")){
+                if((char)ultObj.get(0)=='+'){
+                    zoom('-');
+                }else{
+                    zoom('+');
+                }
+            }
+            else if(ultimaAccion.equals("makeVisible")){
+                makeInvisible();
+            }
+            else if(ultimaAccion.equals("makeInvisible")){
+                makeVisible();
+            }
+        }else{
+            JOptionPane.showMessageDialog(null,"Ingreso el caracter incorrecto.");
+        }
+    }
+    /**
+     * Consulta los viñedos que pueden ser mojados por la lluvia
+     * @returns mojados ArrayList de los viñedos mojados
+     */
+    public void rainsfall(){
+        ArrayList<String> mojados = new ArrayList<String>();
+        for(Rain r: lluvias){
+            for(Gota g: r.getGotas()){
+                if (g.getPos()[1]>=(maxY-30)){
+                    for(String v: nombres){
+                        if(vinedos.get(v).getPos()[0]<=g.getPos()[0] && vinedos.get(v).getPos()[1]>=g.getPos()[0]){
+                            mojados.add(v);
+                        }
+                    }
+                }
+            }
+        }
+        for(String s: mojados){
+            System.out.println(s);
+        }
+        
+    }
+    /**
+     * Devuelve la información de los viñedos.
+     * @return arrayMatrix con las coordenadas de inicio y final de cada viñedo.
+     */
+    public int[][] vineyards(){
+        int[][] vys = new int[vinedos.size()][2];
+        int i = 0;
+        for (VineYard vy : vinedos.values()){
+            vys[i][0] = vy.getPos()[0]+1;
+            vys[i][1] = vy.getPos()[1]+1;
+            i++;
+        }        
+        return vys;
+    }
+     /**
+     * Devuelve la información de las trampas.
+     * @return int[][][] con las coordenadas de inicio y final de 
+     * cada trampa, junto con las coordenadas horizontales de sus huecos.
+     */
+    public int[][][] Tarps(){
+        int [][][]TarpInfo = new int[lonas.size()][3][20];
+        for (int i=0; i<lonas.size(); i++){
+            int [][] tr = lonas.get(i).getPos();
+            for (int x=0; x<tr.length; x++) TarpInfo[i][x] = tr[x];
+            TarpInfo[i][2] = lonas.get(i).getPosH();
+        }
+        return TarpInfo;
+    }
+    
+    /**
+     * Devuelve la información de las lluvias.
+     * @return int[][][] con las coordenadas de los puntos de recorrido de cada lluvia.
+     */
+    public int[][][] rains(){
+        int[][][] rainInfo = new int[lluvias.size()][100][2];
+        
+        return rainInfo;
+    }
+    /**
+     * Devuelve el tamaño de la lista de huecos que hay en cada lona
+     * @param x lona a revisar
+     * @return int
+     */
+    public int getTH(int x){
+         return lonas.get(x).getHuecos().size();
+    }
+}   

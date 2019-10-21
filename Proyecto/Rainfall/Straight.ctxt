@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Straight
+comment0.text=\r\n\ Clase\ lluvia\ Straight\ cambia\ su\ forma\ para\ mantenerse\ recta\ y\ s\u00F3lo\ para\ si\ no\ est\u00E1\ regando\ un\ vi\u00F1edo\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 20/10/2019\r\n
+comment1.params=x
+comment1.target=Straight(int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Lluvia\ Straight\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n
+comment2.params=x\ y\ lonas
+comment2.target=void\ start(int,\ int,\ java.util.ArrayList)
+comment2.text=\r\n\ \ Simula\ la\ lluvia\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n\ @param\ y\ tama\u00F1o\ maximo\ del\ vi\u00F1edo\ en\ y\r\n\ @param\ lonas\ lonas\ del\ valle\r\n
+numComments=3

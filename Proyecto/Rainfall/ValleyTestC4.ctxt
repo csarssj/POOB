@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ValleyTestC4
+comment0.text=\r\n\ The\ test\ class\ ValleyTestC4.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ DeberiaLalluviaAcidaDebeCaerEnElMismoPuntoDondeInicio()
+comment1.text=@Test\r\n\ \ \ \ public\ void\ DeberiaAgujerearLonaFlexible(){\r\n\ \ \ \ \ \ \ \ v1\ \=\ new\ Valley(500,\ 500);\r\n\ \ \ \ \ \ \ \ v1.addTarp(new\ int[]{100,100},new\ int[]{200,200});\r\n\ \ \ \ \ \ \ \ v1.addTarp("flexible",new\ int[]{100,200},new\ int[]{200,100});\r\n\ \ \ \ \ \ \ \ v1.makePuncture(1,20);\r\n\ \ \ \ \ \ \ \ v1.makePuncture(1,80);\r\n\ \ \ \ \ \ \ \ v1.makePuncture(2,50);\r\n\ \ \ \ \ \ \ \ assertEquals(v1.tarps()[0],new\ int[][]{{100,200},{200,210},{80}});\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n
+comment2.params=
+comment2.target=void\ DeberiaDesaparecerTarpRadicalSiSeAgujerea()
+comment3.params=
+comment3.target=void\ NoDeberiaEliminarTarpHard()
+comment4.params=
+comment4.target=void\ DeberiaHacerSoloUnHuecoLonaFlexible()
+comment5.params=
+comment5.target=void\ NoDeberiaAgujerearLonaHard()
+numComments=6

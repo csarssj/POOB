@@ -5,7 +5,7 @@ import Shapes.*;
  * Clase de Viñedos los cuales deben ser regados y recibir luz solar
  * 
  * @author César Eduardo González y Brayan Santiango Buitrago 
- * @version 15/09/2019
+ * @version 1/10/2019
  */
 public class VineYard
 {
@@ -19,6 +19,11 @@ public class VineYard
     
     /**
      * Constructor de la clase VineYard(viñedos)
+     * @param name nombre del viñedo
+     * @param xi posicion inicial en x del viñedo
+     * @param xf posicion final en y del viñedo
+     * @param color color del viñedo (es único, no se puede repetir)
+     * @param maxY largo del valle
      */
     public VineYard(String name,int xi,int xf,String color,int maxY)
     {
@@ -48,7 +53,7 @@ public class VineYard
     }
     /**
      * Cambia el color del viñedo
-     * @param color, el color a cambiar
+     * @param color el color a cambiar
      */
     public void changeColor(String color){
         viñedo.changeColor(color);
@@ -67,7 +72,7 @@ public class VineYard
     }
     /**
      * Retorna las posiciones del viñedo
-     * @returns, pos lista con las posiciones
+     * @returns pos lista con las posiciones
      */
     public int[] getPos(){
         xi=this.xi;
@@ -77,7 +82,7 @@ public class VineYard
     }
     /**
      * Retorna las posiciones del viñedo
-     * @returns, el color del viñedo
+     * @returns el color del viñedo
      */
     public String getColor(){
         return color;

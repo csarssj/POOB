@@ -6,7 +6,7 @@ import Shapes.*;
  * viñedos puedan ser regados.
  *
  * @author César Eduardo González y Brayan Santiango Buitrago 
- * @version 15/09/2019
+ * @version 1/10/2019
  */
 public class Puncture
 {
@@ -46,13 +46,13 @@ public class Puncture
      * @Return x, la posicion en x del hueco.
      */
     public int getXPuncture(){
-        return x;
+        return this.x;
     }
     /**
      *@Return y, la posicion en y del hueco. 
      */
     public int getYPuncture(){
-        return y;
+        return this.y;
     }
     /**
      * Cambia el tamaño de la lona
