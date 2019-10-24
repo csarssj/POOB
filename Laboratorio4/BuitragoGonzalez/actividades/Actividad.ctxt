@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Actividad
+comment0.text=\r\n\ Clase\ actividad\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 24/10/2019\r\n
+comment1.params=id
+comment1.target=Actividad(java.lang.String)
+comment1.text=\r\n\ Constructor\ actividad\r\n\ @param\ id\ identificador\r\n
+comment2.params=id\ descripcion
+comment2.target=Actividad(java.lang.String,\ java.lang.String)
+comment2.text=\r\n\ Constructor\ actividad\r\n\ @param\ id\ identificador\r\n\ @param\ descripcion\ de\ la\ actividad\r\n
+comment3.params=
+comment3.target=int\ creditos()
+comment3.text=\r\n\ Calcula\ el\ numero\ de\ creditos\ de\ una\ actividad\r\n\ @return\ creditos\r\n
+comment4.params=
+comment4.target=int\ creditosDefinidos()
+comment4.text=Calcular\ el\ numero\ de\ creditos\ considerando\ las\ actividades\ bien\ definidas\r\n\ @return\ \r\n
+comment5.params=descripcion
+comment5.target=int\ creditos(java.lang.String)
+comment5.text=\r\n\ busca\ los\ creditos\ de\ una\ actividad\ con\ la\ descripcion\r\n\ @param\ descripcion\ de\ la\ actividad\r\n\ @return\ creditos\r\n
+comment6.params=
+comment6.target=java.lang.String\ getDescripcion()
+comment6.text=\r\n\ Retorna\ la\ descripcion\ de\ una\ actividad\r\n\ @return\ descripcion\r\n
+numComments=7
