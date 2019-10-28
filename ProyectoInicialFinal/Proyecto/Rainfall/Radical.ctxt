@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Radical
+comment0.text=\r\n\ Clase\ de\ la\ lona\ Radical\ la\ cual\ si\ se\ agujerea\ se\ elimina\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
+comment1.params=ini\ fin
+comment1.target=Radical(int[],\ int[])
+comment1.text=\r\n\ Constructor\ para\ la\ clase\ Hard\r\n\ @param\ ini\ punto\ inicial\ de\ la\ lona\r\n\ @param\ fin\ punto\ final\ de\ la\ lona\r\n
+comment2.params=x
+comment2.target=void\ makePuncture(int)
+comment3.params=
+comment3.target=void\ makeInvisible()
+comment4.params=
+comment4.target=void\ makeVisible()
+numComments=5

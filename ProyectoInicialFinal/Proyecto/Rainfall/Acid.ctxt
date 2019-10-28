@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Acid
+comment0.text=\r\n\ Clase\ lluvia\ acida\ la\ cual\ traspasa\ cualquier\ lona\ sin\ si\ hay\ hueco\ o\ no\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
+comment1.params=x
+comment1.target=Acid(int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Lluvia\ acida\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ acida\r\n
+comment2.params=x\ y\ lonas
+comment2.target=void\ start(int,\ int,\ java.util.ArrayList)
+comment3.params=
+comment3.target=java.lang.String\ getTipo()
+numComments=4
