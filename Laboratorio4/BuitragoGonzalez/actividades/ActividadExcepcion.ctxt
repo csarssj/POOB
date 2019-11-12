@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ActividadExcepcion
+comment0.text=\r\n\ Clase\ actividad\ Excepcion\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 24/10/2019\r\n
+comment1.params=mensaje
+comment1.target=ActividadExcepcion(java.lang.String)
+numComments=2
