@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:ProyectoInicialFinal/Proyecto/Shapes/bluej.pkg
 #BlueJ package file
 dependency1.from=Rectangle
 dependency1.to=Canvas
@@ -65,3 +67,104 @@ target5.type=ClassTarget
 target5.width=80
 target5.x=10
 target5.y=140
+========
+#BlueJ package file
+dependency1.from=Triangle
+dependency1.to=Canvas
+dependency1.type=UsesDependency
+dependency2.from=Rectangle
+=======
+#BlueJ package file
+dependency1.from=Rectangle
+dependency1.to=Canvas
+dependency1.type=UsesDependency
+dependency2.from=Line
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+dependency2.to=Canvas
+dependency2.type=UsesDependency
+dependency3.from=Circle
+dependency3.to=Canvas
+dependency3.type=UsesDependency
+<<<<<<< HEAD
+dependency4.from=Line
+=======
+dependency4.from=Triangle
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+dependency4.to=Canvas
+dependency4.type=UsesDependency
+objectbench.height=90
+objectbench.width=760
+package.divider.horizontal=0.6
+package.divider.vertical=0.806
+package.editor.height=396
+<<<<<<< HEAD
+package.editor.width=670
+=======
+package.editor.width=644
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+package.editor.x=40
+package.editor.y=40
+package.frame.height=600
+package.frame.width=800
+package.numDependencies=4
+package.numTargets=5
+package.showExtends=true
+package.showUses=true
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=Line
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=80
+target1.x=300
+target1.y=190
+target2.height=50
+target2.name=Circle
+target2.showInterface=false
+target2.type=ClassTarget
+target2.width=80
+<<<<<<< HEAD
+target2.x=10
+target2.y=80
+=======
+target2.x=170
+target2.y=240
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+target3.height=50
+target3.name=Canvas
+target3.showInterface=false
+target3.type=ClassTarget
+target3.width=80
+<<<<<<< HEAD
+target3.x=120
+target3.y=80
+=======
+target3.x=190
+target3.y=60
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+target4.height=50
+target4.name=Rectangle
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=90
+<<<<<<< HEAD
+target4.x=270
+=======
+target4.x=350
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
+target4.y=30
+target5.height=50
+target5.name=Triangle
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=80
+target5.x=10
+target5.y=140
+<<<<<<< HEAD
+>>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c:Proyecto/Proyecto/Shapes/bluej.pkg
+=======
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

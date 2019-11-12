@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Rain
+comment0.text=\r\nClase\ Lluvia\ que\ simula\ la\ misma\ en\ el\ problema\ Directing\ Rainfall\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 1/10/2019\r\n
+comment1.params=x\ y\ lonas
+comment1.target=Rain(int,\ int,\ java.util.ArrayList)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lluvia\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n\ @param\ y\ tama\u00F1o\ maximo\ del\ vi\u00F1edo\ en\ y\r\n\ @param\ lonas\ lonas\ del\ valle\r\n
+comment2.params=
+comment2.target=void\ makeVisible()
+comment2.text=\r\n\ Vuelve\ visible\ las\ gotas\ que\ conforman\ la\ lluvia\r\n
+comment3.params=
+comment3.target=void\ makeInvisible()
+comment3.text=\r\n\ Vuelve\ invisible\ las\ gotas\ que\ conforman\ la\ lluvia\r\n
+comment4.params=
+comment4.target=void\ changeSize1()
+comment4.text=\r\n\ Aumenta\ el\ tama\u00F1o\ de\ la\ lluvia\r\n
+comment5.params=
+comment5.target=void\ changeSize2()
+comment5.text=\r\n\ Reduce\ el\ tama\u00F1o\ de\ la\ lluvia\ \ \r\n
+comment6.params=
+comment6.target=int\ getX()
+comment6.text=\r\n\ Retorna\ x,\ que\ es\ la\ posicion\ de\ la\ lluvia\r\n
+comment7.params=
+comment7.target=java.util.ArrayList\ getGotas()
+comment7.text=\r\n\ Retorna\ gotas,\ que\ es\ la\ lista\ de\ gotas\ que\ conforman\ la\ lluvia\r\n
+numComments=8

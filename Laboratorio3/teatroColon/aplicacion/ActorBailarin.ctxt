@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=ActorBailarin
 comment0.text=\r\n\ Clase\ ActorBailarin\ actor\ que\ nunca\ para\ de\ moverse\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -11,3 +12,18 @@ comment3.target=void\ decida()
 comment4.params=
 comment4.target=void\ actue()
 numComments=5
+=======
+#BlueJ class context
+comment0.target=ActorBailarin
+comment0.text=\r\n\ Clase\ ActorBailarin\ actor\ que\ nunca\ para\ de\ moverse\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=teatro\ name\ posicionx\ posiciony
+comment1.target=ActorBailarin(Teatro,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ del\ ActorBailarin\r\n\ @param\ teatro\ en\ donde\ se\ trabaja\r\n\ @param\ nombre\ del\ actor\r\n\ @param\ \ posicionx\ del\ actorBailarin\r\n\ @param\ \ posicionxy\ del\ actorBailarin\r\n
+comment2.params=
+comment2.target=void\ corte()
+comment3.params=
+comment3.target=void\ decida()
+comment4.params=
+comment4.target=void\ actue()
+numComments=5
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

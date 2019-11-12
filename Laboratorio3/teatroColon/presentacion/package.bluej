@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ package file
 objectbench.height=94
 objectbench.width=760
@@ -26,3 +27,33 @@ target1.type=ClassTarget
 target1.width=140
 target1.x=10
 target1.y=90
+=======
+#BlueJ package file
+objectbench.height=94
+objectbench.width=760
+package.divider.horizontal=0.6
+package.divider.vertical=0.7396907216494846
+package.editor.height=280
+package.editor.width=670
+package.editor.x=367
+package.editor.y=118
+package.frame.height=488
+package.frame.width=800
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=TeatroColonGUI
+target1.naviview.expanded=false
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=140
+target1.x=10
+target1.y=90
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

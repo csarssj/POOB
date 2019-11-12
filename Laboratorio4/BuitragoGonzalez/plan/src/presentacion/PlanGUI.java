@@ -42,7 +42,11 @@ public class PlanGUI extends JFrame{
 
     
     
+<<<<<<< HEAD
     private PlanGUI() throws ActividadExcepcion{
+=======
+    private PlanGUI(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         coleccion=new Plan();
         coleccion.adicione();
         prepareElementos();
@@ -244,6 +248,7 @@ public class PlanGUI extends JFrame{
     
     
     private void  accionAdicionar(){
+<<<<<<< HEAD
         try {
     		  coleccion.adicione(textoSigla.getText(),textoCreditos.getText(), textoDescripcion.getText());
     	}catch(ActividadExcepcion e) {
@@ -252,6 +257,9 @@ public class PlanGUI extends JFrame{
     		JOptionPane.showConfirmDialog(null, panel, "ERROR",JOptionPane.DEFAULT_OPTION);
     	}
        
+=======
+        coleccion.adicione(textoSigla.getText(),textoCreditos.getText(), textoDescripcion.getText());
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
     }
 
     private void accionBuscar(){
@@ -268,7 +276,11 @@ public class PlanGUI extends JFrame{
         resultadosTexto.setText(buffer.toString());
     } 
     
+<<<<<<< HEAD
    public static void main(String args[]) throws ActividadExcepcion{
+=======
+   public static void main(String args[]){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
        PlanGUI gui=new PlanGUI();
        gui.setVisible(true);
    }    

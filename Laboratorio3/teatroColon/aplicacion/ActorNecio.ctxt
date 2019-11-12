@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=ActorNecio
 comment0.text=\r\n\ Clase\ actor\ necio\ que\ es\ extendiende\ a\ actor\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -9,3 +10,16 @@ comment2.target=void\ corte()
 comment3.params=
 comment3.target=void\ actue()
 numComments=4
+=======
+#BlueJ class context
+comment0.target=ActorNecio
+comment0.text=\r\n\ Clase\ actor\ necio\ que\ es\ extendiende\ a\ actor\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=teatro\ name\ posicionx\ posiciony
+comment1.target=ActorNecio(Teatro,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ del\ Actor\ necio\r\n\ @param\ teatro\ en\ donde\ se\ trabaja\r\n\ @param\ nombre\ del\ actor\r\n\ @param\ \ posicionx\ del\ actor\ necio\r\n\ @param\ \ posicionxy\ del\ actor\ necio\r\n
+comment2.params=
+comment2.target=void\ corte()
+comment3.params=
+comment3.target=void\ actue()
+numComments=4
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

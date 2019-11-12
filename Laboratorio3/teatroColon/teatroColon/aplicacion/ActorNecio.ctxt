@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ActorNecio
+comment1.params=teatro\ name\ posicionx\ posiciony
+comment1.target=ActorNecio(Teatro,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ActorNecio\r\n
+comment2.params=
+comment2.target=void\ corte()
+comment3.params=
+comment3.target=void\ actue()
+numComments=4

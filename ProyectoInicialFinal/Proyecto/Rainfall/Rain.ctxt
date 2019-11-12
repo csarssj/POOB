@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Rain
 comment0.text=\r\nClase\ Lluvia\ que\ simula\ la\ misma\ en\ el\ problema\ Directing\ Rainfall\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
@@ -44,3 +45,51 @@ comment9.params=
 comment9.target=java.util.ArrayList\ getGotas()
 comment9.text=\r\n\ Retorna\ gotas,\ que\ es\ la\ lista\ de\ gotas\ que\ conforman\ la\ lluvia\r\n
 numComments=15
+=======
+#BlueJ class context
+comment0.target=Rain
+comment0.text=\r\nClase\ Lluvia\ que\ simula\ la\ misma\ en\ el\ problema\ Directing\ Rainfall\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
+comment1.params=x
+comment1.target=Rain(int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ class\ Lluvia\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n
+comment10.params=
+comment10.target=boolean\ getContacto()
+comment10.text=\r\n\ Retorna\ si\ hay\ contacto\ con\ una\ lona\ radical\r\n
+comment11.params=
+comment11.target=int\ getActual()
+comment11.text=\r\n\ Retorna\ posicion\ de\ la\ lona\ actual\ donde\ se\ esta\ cayendo\r\n
+comment12.params=c
+comment12.target=void\ setContacto(boolean)
+comment12.text=\r\n\ indica\ si\ hay\ contacto\ con\ una\ lona\ radical\r\n
+comment13.params=x
+comment13.target=void\ setActual(int)
+comment13.text=\r\n\ cambia\ posicion\ de\ la\ lona\ actual\ donde\ se\ esta\ cayendo\r\n
+comment14.params=
+comment14.target=java.lang.String\ getTipo()
+comment14.text=\r\n\ retorna\ el\ tipo\ de\ la\ lluvia\r\n
+comment2.params=x\ y\ lonas
+comment2.target=void\ start(int,\ int,\ java.util.ArrayList)
+comment2.text=\r\n\ \ Simula\ la\ lluvia\r\n\ @param\ x\ posicion\ en\ x\ de\ la\ lluvia\ \r\n\ @param\ y\ tama\u00F1o\ maximo\ del\ vi\u00F1edo\ en\ y\r\n\ @param\ lonas\ lonas\ del\ valle\r\n
+comment3.params=
+comment3.target=void\ makeVisible()
+comment3.text=\r\n\ Vuelve\ visible\ las\ gotas\ que\ conforman\ la\ lluvia\r\n
+comment4.params=
+comment4.target=void\ makeInvisible()
+comment4.text=\r\n\ Vuelve\ invisible\ las\ gotas\ que\ conforman\ la\ lluvia\r\n
+comment5.params=
+comment5.target=void\ changeSize1()
+comment5.text=\r\n\ Aumenta\ el\ tama\u00F1o\ de\ la\ lluvia\r\n
+comment6.params=
+comment6.target=void\ changeSize2()
+comment6.text=\r\n\ Reduce\ el\ tama\u00F1o\ de\ la\ lluvia\ \ \r\n
+comment7.params=color
+comment7.target=void\ changeColor(java.lang.String)
+comment7.text=\r\n\ cambia\ el\ color\ de\ la\ lluvia\r\n
+comment8.params=
+comment8.target=int\ getX()
+comment8.text=\r\n\ Retorna\ x,\ que\ es\ la\ posicion\ de\ la\ lluvia\r\n
+comment9.params=
+comment9.target=java.util.ArrayList\ getGotas()
+comment9.text=\r\n\ Retorna\ gotas,\ que\ es\ la\ lista\ de\ gotas\ que\ conforman\ la\ lluvia\r\n
+numComments=15
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

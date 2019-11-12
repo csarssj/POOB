@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=ValleyTestC4
 comment0.text=\r\n\ Clase\ de\ pruebas\ ciclo\ 4\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
@@ -18,3 +19,25 @@ comment7.target=void\ DeberiaHacerSoloUnHuecoLonaFlexible()
 comment8.params=
 comment8.target=void\ NoDeberiaAgujerearLonaHard()
 numComments=9
+=======
+#BlueJ class context
+comment0.target=ValleyTestC4
+comment0.text=\r\n\ Clase\ de\ pruebas\ ciclo\ 4\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
+comment1.params=
+comment1.target=void\ DeberiaBorrarLonaRadicalSiHaceHueco()
+comment2.params=
+comment2.target=void\ NoDeberiaHacerInvisibleLonaHard()
+comment3.params=
+comment3.target=void\ DeberiaLalluviaAcidaDebeCaerEnElMismoPuntoDondeInicio()
+comment4.params=
+comment4.target=void\ DeberiaDesaparecerTarpRadicalSiSeAgujerea()
+comment5.params=
+comment5.target=void\ NoDeberiaEliminarTarpHard()
+comment6.params=
+comment6.target=void\ DeberiaHacerHuecoEnLugarDiferenteEnLonzaCrazy()
+comment7.params=
+comment7.target=void\ DeberiaHacerSoloUnHuecoLonaFlexible()
+comment8.params=
+comment8.target=void\ NoDeberiaAgujerearLonaHard()
+numComments=9
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

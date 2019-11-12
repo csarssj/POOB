@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package aplicacion;
 
+=======
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
 import java.util.ArrayList;
 
 /**
@@ -15,14 +18,22 @@ public class ActividadCompuesta extends Actividad{
      * Constructor actividad simple
      * @param id identificador
      */
+<<<<<<< HEAD
     public ActividadCompuesta(String id)throws ActividadExcepcion{
+=======
+    public ActividadCompuesta(String id){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         super(id);
         actividades= new ArrayList<Actividad>();
     }
     /**
      * Agrega actividades simples a la compuesta
      */
+<<<<<<< HEAD
     public void actividad(Actividad a)throws ActividadExcepcion{
+=======
+    public void actividad(Actividad a){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         actividades.add(a);
     }
     

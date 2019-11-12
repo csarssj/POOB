@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=ActividadCompuesta
 comment0.text=\r\n\ Clase\ actividad\ Compuesta\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 24/10/2019\r\n
@@ -18,3 +19,25 @@ comment6.params=
 comment6.target=java.util.ArrayList\ getActividades()
 comment6.text=\r\n\ Retorna\ las\ actividades\ de\ una\ actividad\ compuesta\r\n
 numComments=7
+=======
+#BlueJ class context
+comment0.target=ActividadCompuesta
+comment0.text=\r\n\ Clase\ actividad\ Compuesta\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 24/10/2019\r\n
+comment1.params=id
+comment1.target=ActividadCompuesta(java.lang.String)
+comment1.text=\r\n\ Constructor\ actividad\ simple\r\n\ @param\ id\ identificador\r\n
+comment2.params=a
+comment2.target=void\ actividad(Actividad)
+comment2.text=\r\n\ Agrega\ actividades\ simples\ a\ la\ compuesta\r\n
+comment3.params=
+comment3.target=int\ creditos()
+comment4.params=
+comment4.target=int\ creditosDefinidos()
+comment4.text=\r\n\ Retorna\ los\ creditos\ de\ una\ actividad\ definida\r\n
+comment5.params=descripcion
+comment5.target=int\ creditos(java.lang.String)
+comment6.params=
+comment6.target=java.util.ArrayList\ getActividades()
+comment6.text=\r\n\ Retorna\ las\ actividades\ de\ una\ actividad\ compuesta\r\n
+numComments=7
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

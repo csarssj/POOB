@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package aplicacion;
 
+=======
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -16,7 +19,11 @@ public class ActividadTest{
 
 
     @Before
+<<<<<<< HEAD
     public void setUp()throws ActividadExcepcion{
+=======
+    public void setUp(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         plan=new ActividadCompuesta("Plan de estudios");
         ActividadCompuesta is=new ActividadCompuesta("Software");
         ActividadCompuesta isb=new ActividadCompuesta("Software Basico");
@@ -55,7 +62,11 @@ public class ActividadTest{
     }       
     
     @Test
+<<<<<<< HEAD
     public void deberiaLanzarExcepcionSiUnaActividadCompuestaNoTieneActividadesSimples()throws ActividadExcepcion{
+=======
+    public void deberiaLanzarExcepcionSiUnaActividadCompuestaNoTieneActividadesSimples(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         plan.actividad(new ActividadCompuesta("Electivas"));
         try { 
            assertEquals(23,plan.creditos());
@@ -67,13 +78,21 @@ public class ActividadTest{
     
     
    @Test
+<<<<<<< HEAD
     public void deberiaLanzarExcepcionSiNoSeConocenLosCreditosDeUnaActividadSimple()throws ActividadExcepcion{
+=======
+    public void deberiaLanzarExcepcionSiNoSeConocenLosCreditosDeUnaActividadSimple(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         plan.actividad(new ActividadSimple("Practica",null));
         try { 
            assertEquals(23,plan.creditos());
            fail("No lanza la excepcion");
         } catch (ActividadExcepcion e) {
+<<<<<<< HEAD
             assertEquals(ActividadExcepcion.SIMPLE_CREDITOS,e.getMessage());
+=======
+            assertEquals(ActividadExcepcion.SIMPLE_SIN_CREDITOS,e.getMessage());
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         }    
     }     
     

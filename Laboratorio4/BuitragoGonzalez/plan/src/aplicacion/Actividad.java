@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package aplicacion;
 
+=======
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
 /**
  * Clase actividad
  * 
@@ -14,8 +17,12 @@ public abstract class Actividad{
      * Constructor actividad
      * @param id identificador
      */
+<<<<<<< HEAD
     public Actividad(String id) throws ActividadExcepcion{
         if(id.length()==0)throw new ActividadExcepcion(ActividadExcepcion.SIGLAS_VACIAS);
+=======
+    public Actividad(String id){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         this.id=id;
         this.descripcion="Por definir";
     }
@@ -24,8 +31,12 @@ public abstract class Actividad{
      * @param id identificador
      * @param descripcion de la actividad
      */
+<<<<<<< HEAD
     public Actividad(String id, String descripcion) throws ActividadExcepcion{
         if(id.length()==0)throw new ActividadExcepcion(ActividadExcepcion.SIGLAS_VACIAS);
+=======
+    public Actividad(String id, String descripcion){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         this.id=id;
         this.descripcion=descripcion;
     }
@@ -53,6 +64,7 @@ public abstract class Actividad{
     public String getDescripcion(){
         return descripcion;
     }
+<<<<<<< HEAD
     /**
      * Retorna el codigo de la actividad
      * @return id
@@ -60,4 +72,7 @@ public abstract class Actividad{
     public String getId() {
 	return id;
     }
+=======
+    
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
 }

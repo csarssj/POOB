@@ -7,14 +7,22 @@ import java.util.ArrayList;
 public class Plan{
     private ActividadCompuesta plan;
 
+<<<<<<< HEAD
     public Plan()throws ActividadExcepcion{
+=======
+    public Plan(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         plan = new ActividadCompuesta("Plan 14");
     }
     
     /**
      * Adiciona algunas materias
      */
+<<<<<<< HEAD
     public void adicione() throws ActividadExcepcion{
+=======
+    public void adicione(){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         Actividad ejemplos[] = {
                 new ActividadSimple("AYED", "Al finalizar el curso el estudiante debe estar en capacidad de desarrollar soluciones informáticas "+
                 "efectivas y modulares a problemas puntuales reales aplicando técnicas y herramientas adecuadas.",
@@ -37,7 +45,11 @@ public class Plan{
     /**
      * Consulta la información de una actividad
      */
+<<<<<<< HEAD
     public Actividad getInformacion(String id) {
+=======
+    public Actividad getInformacion(String id){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         Actividad res=null;
         for(Actividad a: plan.getActividades()){
             if (a.getId().equals(id)){
@@ -51,7 +63,11 @@ public class Plan{
     /**
      * Adiciona una nueva actividad
      */
+<<<<<<< HEAD
     public void adicione(String id, String creditos, String descripcion) throws ActividadExcepcion{
+=======
+    public void adicione(String id, String creditos, String descripcion){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
        plan.actividad(new ActividadSimple(id, descripcion, creditos.equals("") ? null: Integer.parseInt(creditos)));
     }
 
@@ -64,7 +80,11 @@ public class Plan{
      * @param subCadena La información a buscar
      * @return 
      */
+<<<<<<< HEAD
     public ArrayList<Actividad> busque(String subCadena)throws ActividadExcepcion{
+=======
+    public ArrayList<Actividad> busque(String subCadena){
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
         ArrayList<Actividad> resultados=null;
     	for(Actividad a: plan.getActividades()){
     	    if(a.getDescripcion().contains(subCadena)){

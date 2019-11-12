@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=EnEscena
 comment0.text=\r\n\ Interface\ EnEscena\ para\ simular\ todo\ lo\ de\ un\ escenario\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -25,3 +26,32 @@ comment9.params=
 comment9.target=java.lang.String\ mensaje()
 comment9.text=\r\n\ El\ mensaje\ es\ la\ representaci\u00F3n\ cadena\ del\ objeto\r\n
 numComments=11
+=======
+#BlueJ class context
+comment0.target=EnEscena
+comment0.text=\r\n\ Interface\ EnEscena\ para\ simular\ todo\ lo\ de\ un\ escenario\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=
+comment1.target=int\ getPosicionX()
+comment10.params=
+comment10.target=void\ decida()
+comment10.text=\r\n\ Decide\ aleatoriamente\ la\ acci\u00F3n\ a\ tomar\r\n
+comment2.params=
+comment2.target=int\ getPosicionY()
+comment3.params=
+comment3.target=int[]\ getPosicionX1()
+comment4.params=
+comment4.target=int[]\ getPosicionY1()
+comment5.params=
+comment5.target=java.awt.Color\ getColor()
+comment6.params=
+comment6.target=void\ actue()
+comment7.params=
+comment7.target=void\ corte()
+comment8.params=
+comment8.target=java.lang.String\ forma()
+comment8.text=\r\n\ Es\ una\ persona\r\n
+comment9.params=
+comment9.target=java.lang.String\ mensaje()
+comment9.text=\r\n\ El\ mensaje\ es\ la\ representaci\u00F3n\ cadena\ del\ objeto\r\n
+numComments=11
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

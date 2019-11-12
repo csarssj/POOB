@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package aplicacion;
 
+=======
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
  
 /**
  * Clase actividad simple
@@ -15,6 +18,7 @@ public class ActividadSimple extends Actividad{
      * @param id identificador
      * @param creditos
      */
+<<<<<<< HEAD
     public ActividadSimple(String id, Integer creditos)throws ActividadExcepcion {
         super(id);
         boolean esEntero;
@@ -26,6 +30,11 @@ public class ActividadSimple extends Actividad{
             esEntero = false;
         }
         if(!esEntero) throw new ActividadExcepcion(ActividadExcepcion.CREDITOS);
+=======
+    public ActividadSimple(String id, Integer creditos){
+        super(id);
+        this.creditos=creditos;
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
     }
     /**
      * Constructor actividad simple
@@ -33,6 +42,7 @@ public class ActividadSimple extends Actividad{
      * @param descripcion de la actividad
      * @param creditos
      */
+<<<<<<< HEAD
     public ActividadSimple(String id,  String descripcion,Integer creditos)throws ActividadExcepcion{
         super(id,descripcion);
         boolean esEntero;
@@ -43,6 +53,11 @@ public class ActividadSimple extends Actividad{
             esEntero = false;
         }
         if(!esEntero) throw new ActividadExcepcion(ActividadExcepcion.CREDITOS);
+=======
+    public ActividadSimple(String id,  String descripcion,Integer creditos){
+        super(id,descripcion);
+        this.creditos=creditos;
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
     }
     
     @Override

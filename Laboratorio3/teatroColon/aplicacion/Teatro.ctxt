@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Teatro
 comment0.text=\r\n\ Clase\ Teatro\ en\ donde\ se\ encuentran\ los\ actores\ y\ los\ elementos\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -35,3 +36,42 @@ comment9.params=
 comment9.target=void\ accion()
 comment9.text=\r\n\ Llama\ el\ metodo\ actue\ de\ cada\ uno\ de\ los\ elementos\r\n
 numComments=12
+=======
+#BlueJ class context
+comment0.target=Teatro
+comment0.text=\r\n\ Clase\ Teatro\ en\ donde\ se\ encuentran\ los\ actores\ y\ los\ elementos\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=
+comment1.target=Teatro\ demeTeatro()
+comment1.text=\r\n\ Retorna\ un\ teatro\r\n\ @returns\ teatro\ teatro\ a\ retornar\r\n
+comment10.params=
+comment10.target=void\ corten()
+comment10.text=\r\n\ Llama\ el\ metodo\ corte\ de\ cada\ uno\ de\ los\ elementos\r\n
+comment11.params=
+comment11.target=void\ decidan()
+comment11.text=\r\n\ Llama\ el\ metodo\ decida\ de\ cada\ uno\ de\ los\ elementos\r\n
+comment2.params=
+comment2.target=void\ nuevoTeatro()
+comment2.text=\r\n\ Crea\ un\ nuevo\ teatro\r\n
+comment3.params=d
+comment3.target=void\ cambieTeatro(Teatro)
+comment3.text=\r\n\ Cambia\ el\ teatro\ actual\r\n\ @param\ d\ teatro\ nuevo\r\n
+comment4.params=
+comment4.target=Teatro()
+comment4.text=\r\n\ Constructor\ clase\ Teatro\r\n
+comment5.params=
+comment5.target=void\ algunosEnEscena()
+comment5.text=\r\n\ Crea\ y\ adiciona\ los\ elementos\ del\ teatro\ y\ los\ pone\ en\ Escena\r\n
+comment6.params=n
+comment6.target=EnEscena\ demeEnEscena(int)
+comment6.text=\r\n\ Retorna\ los\ eementos\ en\ escena\r\n\ @returns\ h\ elemento\ EnEscena\r\n
+comment7.params=e
+comment7.target=void\ adicione(EnEscena)
+comment7.text=\r\n\ adiciona\ los\ elementos\ en\ Escena\r\n\ @param\ e\ EnEscena\ elemento\ a\ adicionar\r\n
+comment8.params=
+comment8.target=int\ numeroEnEscena()
+comment8.text=\r\n\ Numero\ de\ elementos\ en\ escena\r\n\ @returns\ int\ tama\u00F1o\ de\ la\ lista\ elementos\r\n
+comment9.params=
+comment9.target=void\ accion()
+comment9.text=\r\n\ Llama\ el\ metodo\ actue\ de\ cada\ uno\ de\ los\ elementos\r\n
+numComments=12
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

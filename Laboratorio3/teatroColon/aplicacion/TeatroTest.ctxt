@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=TeatroTest
 comment0.text=\r\n\ The\ test\ class\ TeatroTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
@@ -19,3 +20,26 @@ comment7.target=void\ deberiaNohacernada()
 comment8.params=
 comment8.target=void\ deberiaCerrarTelon()
 numComments=9
+=======
+#BlueJ class context
+comment0.target=TeatroTest
+comment0.text=\r\n\ The\ test\ class\ TeatroTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=TeatroTest()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ TeatroTest\r\n
+comment2.params=
+comment2.target=void\ deberiainiciar()
+comment3.params=
+comment3.target=void\ deberiaCrearActor()
+comment4.params=
+comment4.target=void\ deberiaPrenderLuz()
+comment5.params=
+comment5.target=void\ deberiaApagarLuz()
+comment6.params=
+comment6.target=void\ deberiaDecirSoyBairalin()
+comment7.params=
+comment7.target=void\ deberiaNohacernada()
+comment8.params=
+comment8.target=void\ deberiaCerrarTelon()
+numComments=9
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

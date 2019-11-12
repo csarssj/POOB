@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Actor
 comment0.text=\r\n\ Clase\ actor\ que\ es\ extendiende\ a\ persona\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -25,3 +26,32 @@ comment8.params=
 comment8.target=java.lang.String\ mensaje()
 comment8.text=\r\n\ mensaje\ del\ actor\r\n\ @return\ palabras\ mensaje\ del\ actor\r\n
 numComments=9
+=======
+#BlueJ class context
+comment0.target=Actor
+comment0.text=\r\n\ Clase\ actor\ que\ es\ extendiende\ a\ persona\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=
+comment1.target=Teatro\ getTeatro()
+comment2.params=teatro\ name\ posicionx\ posiciony
+comment2.target=Actor(Teatro,\ java.lang.String,\ int,\ int)
+comment2.text=\r\n\ Constructor\ del\ Actor\r\n\ @param\ teatro\ en\ donde\ se\ trabaja\r\n\ @param\ nombre\ del\ actor\r\n\ @param\ \ posicionx\ del\ actor\r\n\ @param\ \ posicionxy\ del\ actor\r\n
+comment3.params=direccion
+comment3.target=boolean\ puedeMover(char)
+comment3.text=\r\n\ saber\ si\ el\ actor\ se\ puede\ mover\ hacia\ alguna\ direcci\u00F3n\r\n\ @param\ char\ direccion\ a\ la\ que\ se\ quiere\ mover\ \r\n\ @return\ puede\ retorna\ true\ o\ false\ si\ se\ puede\ mover\r\n
+comment4.params=
+comment4.target=void\ corte()
+comment4.text=\r\n\ cuando\ la\ escena\ para\r\n
+comment5.params=
+comment5.target=void\ actue()
+comment5.text=\r\n\ el\ actor\ se\ mueve\ cuando\ empieza\ la\ escena\r\n
+comment6.params=
+comment6.target=int[]\ getPosicionX1()
+comment6.text=\r\n\ heredado\ de\ enEscena\ pero\ aca\ no\ se\ usa\r\n
+comment7.params=
+comment7.target=int[]\ getPosicionY1()
+comment7.text=\r\n\ heredado\ de\ enEscena\ pero\ aca\ no\ se\ usa\r\n
+comment8.params=
+comment8.target=java.lang.String\ mensaje()
+comment8.text=\r\n\ mensaje\ del\ actor\r\n\ @return\ palabras\ mensaje\ del\ actor\r\n
+numComments=9
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Persona
 comment0.text=\r\n\ Clase\ Persona\ que\ es\ extendida\ para\ actores\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -31,3 +32,38 @@ comment9.params=
 comment9.target=int\ getPosicionX()
 comment9.text=Retorna\ la\ coordenada\ x\ de\ la\ posicion
 numComments=11
+=======
+#BlueJ class context
+comment0.target=Persona
+comment0.text=\r\n\ Clase\ Persona\ que\ es\ extendida\ para\ actores\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=nombre\ posicionx\ posiciony
+comment1.target=Persona(java.lang.String,\ int,\ int)
+comment1.text=Crea\ un\ nuevo\ persona\ en\ la\ posicion\ <i>(posicionx,\ posiciony)</i>\ \r\n\ \ \ \ @param\ nombre\ nombre\ de\ la\ persona\r\n\ \ \ \ @param\ posicionx\ coordenada\ x\ de\ la\ posicion\ \r\n\ \ \ \ @param\ posiciony\ coordenada\ y\ de\ la\ posicion\r\n
+comment10.params=
+comment10.target=int\ getPosicionY()
+comment10.text=Retorna\ la\ coordenada\ y\ de\ la\ posicion
+comment2.params=
+comment2.target=java.awt.Color\ getColor()
+comment2.text=Retorna\ el\ color\ del\ vestido
+comment3.params=color
+comment3.target=void\ setColor(java.awt.Color)
+comment4.params=c\ d
+comment4.target=void\ muevaBrazo(char,\ char)
+comment4.text=Mueve\ un\ brazo\ segun\ las\ indicaciones\r\n\ \ \ \ @param\ c\ el\ brazo\ a\ mover\:\ I(zquierdo)\ o\ D(erecho)\r\n\ \ \ \ @param\ d\ el\ modo\ de\ moverlo\:\ S(ubir)\ o\ B(ajar)\r\n
+comment5.params=c\ d
+comment5.target=void\ muevaPierna(char,\ char)
+comment5.text=Mueve\ una\ pierna\ segun\ las\ indicaciones\r\n\ \ \ \ @param\ c\ la\ pierna\ a\ mover\:\ I(zquierdo)\ o\ D(erecho)\r\n\ \ \ \ @param\ d\ el\ modo\ de\ moverlo\:\ S(ubir),\ B(ajar),\ P(iso)\r\n
+comment6.params=c
+comment6.target=int\ getPosicionBrazo(char)
+comment6.text=Retorna\ la\ posicion\ de\ un\ brazo\r\n\ \ \ \ @param\ c\ el\ brazo\ de\ interes\:\ I(zquierdo)\ o\ D(erecho)\r\n\ \ \ \ @return\ la\ posicion\ del\ brazo\ indicada\r\n
+comment7.params=c
+comment7.target=int\ getPosicionPierna(char)
+comment7.text=Retorna\ la\ posicion\ de\ una\ pierna\r\n\ \ \ \ @param\ c\ la\ pierna\ de\ interes\:\ I(zquierda)\ o\ D(erecha)\r\n\ \ \ \ @return\ la\ posicion\ de\ la\ pierna\ indicada\r\n
+comment8.params=c
+comment8.target=void\ muevase(char)
+comment8.text=Se\ mueve\ en\ la\ direccion\ indicada\r\n\ \ \ \ @param\ c\ indica\ la\ direccion.\ N(orte),\ S(ur),\ E(ste),\ O(este)\r\n
+comment9.params=
+comment9.target=int\ getPosicionX()
+comment9.text=Retorna\ la\ coordenada\ x\ de\ la\ posicion
+numComments=11
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c

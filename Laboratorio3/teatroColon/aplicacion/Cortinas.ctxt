@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Cortinas
 comment0.text=\r\n\ Clase\ Cortunas\ que\ es\ un\ elemento\ del\ escenario\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
@@ -28,3 +29,35 @@ comment9.params=
 comment9.target=int[]\ getPosicionY1()
 comment9.text=\r\n\ heredado\ de\ enEscena\ pero\ aca\ no\ se\ usa\r\n
 numComments=10
+=======
+#BlueJ class context
+comment0.target=Cortinas
+comment0.text=\r\n\ Clase\ Cortunas\ que\ es\ un\ elemento\ del\ escenario\r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 3/10/2019\r\n
+comment1.params=teatro\ name
+comment1.target=Cortinas(Teatro,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ de\ la\ cortina\r\n\ @param\ teatro\ en\ donde\ se\ trabaja\r\n\ @param\ nombre\ de\ la\ cortina\ a\ adicionar\r\n
+comment2.params=
+comment2.target=java.awt.Color\ getColor()
+comment2.text=\r\n\ Retorna\ el\ color\ de\ la\ cortina\r\n\ @Returns\ color\ de\ la\ cortina\r\n
+comment3.params=
+comment3.target=void\ actue()
+comment3.text=\r\n\ abre\ las\ cortinas\r\n
+comment4.params=
+comment4.target=void\ corte()
+comment4.text=\r\n\ cierra\ las\ cortinas\r\n
+comment5.params=
+comment5.target=java.lang.String\ forma()
+comment6.params=
+comment6.target=int\ getPosicionX()
+comment6.text=\r\n\ Retorna\ posicion\ en\ x\ de\ la\ cortina\r\n\ @Returns\ xIni\ punto\ en\ x\r\n
+comment7.params=
+comment7.target=int\ getPosicionY()
+comment7.text=\r\n\ Retorna\ posicion\ en\ x\ de\ la\ cortina\r\n\ @Returns\ xFin\ punto\ en\ x\r\n
+comment8.params=
+comment8.target=int[]\ getPosicionX1()
+comment8.text=\r\n\ heredado\ de\ enEscena\ pero\ aca\ no\ se\ usa\r\n
+comment9.params=
+comment9.target=int[]\ getPosicionY1()
+comment9.text=\r\n\ heredado\ de\ enEscena\ pero\ aca\ no\ se\ usa\r\n
+numComments=10
+>>>>>>> 58bc69471f0187fc38fa82cc8c4679c136078c7c
