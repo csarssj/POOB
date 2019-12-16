@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Flexible
+comment0.text=\r\n\ Clase\ de\ la\ lona\ Flexible\ la\ cual\ si\ se\ agujerea\ se\ elimina\r\n\ \r\n\ @author\ C\u00E9sar\ Eduardo\ Gonz\u00E1lez\ y\ Brayan\ Santiango\ Buitrago\ \r\n\ @version\ 27/10/2019\r\n
+comment1.params=ini\ fin
+comment1.target=Flexible(int[],\ int[])
+comment2.params=simHeight\ simWidth
+comment2.target=int[]\ getFlexiblePoint(int,\ int)
+comment2.text=\r\n\ Devuelve\ un\ punto\ al\ azar\ dentro\ de\ las\ fronteras\ del\ simulador.\r\n\ @param\ simHeight\ altura\ del\ simulador.\r\n\ @param\ simWidth\ largo\ del\ simulador.\r\n\ @return\ array\ con\ las\ coordenadas.\r\n
+comment3.params=x
+comment3.target=void\ makePuncture(int)
+comment4.params=
+comment4.target=void\ makeInvisible()
+comment5.params=
+comment5.target=void\ makeVisible()
+numComments=6

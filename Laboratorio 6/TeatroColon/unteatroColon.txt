@@ -1,0 +1,24 @@
+Luz Luz 1 200 355 1 500 500
+Luz Luz 600 200 355 1 500 500
+Luz Luz 1 200 355 1 500 500
+Luz Luz 600 200 355 1 500 500
+Actor romeo 100 180
+Actor julieta 200 180
+Actor romeo 100 180
+Actor julieta 200 180
+ActorNecio homer 100 360
+ActorNecio bard 200 360
+ActorNecio homer 100 360
+ActorNecio bard 200 360
+ActorPerezoso bella 50 50
+ActorPerezoso edward 20 50
+ActorPerezoso bella 50 50
+ActorPerezoso edward 20 50
+ActorBailarin Brayan 300 10
+ActorBailarin Cesar 350 10
+ActorBailarin Brayan 300 10
+ActorBailarin Cesar 350 10
+Cortinas CortinaDerecha 600
+Cortinas CortinaIzquierda 600
+Cortinas CortinaDerecha 600
+Cortinas CortinaIzquierda 600

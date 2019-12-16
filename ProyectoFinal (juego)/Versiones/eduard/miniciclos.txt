@@ -1,0 +1,35 @@
+Se realizaron los modelos y pruebas 
+
+Se realizaron las clase "Base" DonkeyPoob, Jugador, Plataforma, Barril, Escalera , Peach, Sorpresa
+
+Se extendio la clase Jugador para tener una clase JugadorCPU
+
+Se extendio la clase Plataforma para los otros tipos
+
+Se extendio la clase Bloque para los otros tipos
+
+Se extendio la clase Sorpresa para los otros tipos
+
+Se extendio la clase JugadorCPU para los tipos especificos de CPU
+
+Se sobreescribiero el metodo act,standing,checkSOColisions para unos bloques especificos
+
+Se sobreescribieron metodos act y standing para los jugadores y rescatadores especificos
+
+Se realizo en la parte visual un menu
+
+Se realizo la funcion de pausar
+
+Se realizo la funcion de reiniciar
+
+Se colocaron imagenes
+
+Se sobreescribieron el metodo reaccione para la plataforma pegante
+
+Se creo la clase de persitencia junto a sus metodos
+
+En la parte visual botones para abrir y guardar / importar 
+
+Se añadio la funcionalidad de cambiar el color de jugador y peach  y escoger los personajes y diferentes cosas del mapa
+
+Se agrego el modo de juego Jugador vs PC

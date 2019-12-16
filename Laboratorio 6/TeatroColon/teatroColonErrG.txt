@@ -1,0 +1,12 @@
+Luz Luz 1 1 200 500 355 500
+Luz Luz 600 1 200 500 355 500
+Actor romeo queHace 140
+Actor julieta 200 140
+ActorNecio homer 100 340
+ActorNecio bard 200 340
+ActorPerezoso bella 50 50
+ActorPerezoso edward 20 50
+ActorBailarin Brayan 300 10
+ActorBailarin Cesar 350 10
+Cortinas CortinaDerecha 600
+Cortinas CortinaIzquierda 600
